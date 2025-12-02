@@ -8,7 +8,7 @@ let allTags = new Set();
 
 async function loadRecipes(){
   try{
-    const res = await fetch('rezepte.json');
+   const res = await fetch(`${window.location.pathname.replace(/\/$/, '')}/rezepte.json`);
     if(!res.ok) throw new Error('Could not load recipes');
     recipes = await res.json();
     collectTags();
