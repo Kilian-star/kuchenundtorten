@@ -1,52 +1,63 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kuchen & Torten  Rezepte</title>
+  <meta charset="utf-8"> <!-- UTF-8 für Sonderzeichen & Emojis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Kuchen & Torten – Rezepte 🍰</title>
+
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#f6edff" />
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="description" content="Leckere Kuchen- und Tortenrezepte.">
+  <meta name="theme-color" content="#bfa0ff">
 </head>
+
 <body>
-  <header class="site-header" id="oben">
-    <div class="header-inner">
-      <h1>Kuchen &amp; Torten</h1>
-      <p class="tagline">Rezepte  modern, fein, köstlich</p>
-    </div>
+  <header class="site-header">
+    <h1>Kuchen & Torten – Rezepte 🍰</h1>
   </header>
 
   <main class="container">
-    <section class="controls">
-      <div class="search-wrap" id="suggestions">
-        <input id="searchInput" class="input" placeholder="Suche nach Rezepten oder Zutaten&" autocomplete="off" />
-        <div id="suggestionsBox" class="suggestions-box" aria-hidden="true"></div>
-      </div>
 
-      <div class="actions">
-        <select id="categorySelect" class="but">
-          <option value="all">Alle Kategorien</option>
-        </select>
-        <button class="but" id="clearButton" title="Suchfeld leeren">Leeren</button>
-        <button class="but" id="showFavorites" title="Meine Favoriten">P Favoriten</button>
-        <button class="but" id="themeToggle" title="Dark / Light"><</button>
-      </div>
-    </section>
+    <div class="controls">
+      <input id="searchInput" class="input" placeholder="Suche nach einem Rezept… Ä, Ö, Ü, 🍓" autocomplete="off">
+      <button id="clearButton" class="but">Leeren</button>
+      <button id="showFavorites" class="but">⭐ Favoriten</button>
+      <button id="themeToggle" class="but">🌓 Dark Mode</button>
+    </div>
 
-    <div id="tagContainer" class="tag-container" aria-label="Tags"></div>
+    <select id="categorySelect" class="but">
+      <option value="all">Alle Kategorien</option>
+    </select>
 
-    <p id="status" class="status" aria-live="polite"></p>
+    <div id="tagContainer"></div>
 
-    <section id="results" class="grid" aria-live="polite"></section>
+    <p id="status"></p>
+
+    <div id="results" class="grid"></div>
+
   </main>
 
+  <!-- ⭐ Neuer Footer -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <a href="mailto:kilian.mro@outlook.de">Schreibe mir ein Rezept</a> " <a href="#oben">Nach oben</a>
-    </div>
+    <p>
+      <a href="#top" id="toTop" style="text-decoration:none; font-weight:600;">⬆️ Nach oben</a><br>
+      <a href="mailto:deine-email@example.com" style="color:inherit; text-decoration:none;">
+        📧 deine-email@example.com
+      </a>
+    </p>
   </footer>
 
   <script src="js/script.js"></script>
+
+  <!-- Smooth Scroll nach oben -->
+  <script>
+    document.getElementById("toTop").addEventListener("click", function(e){
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
 </body>
 </html>
