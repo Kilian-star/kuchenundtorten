@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Schokoladen-Marmorkuchen",
+    "category": "Kuchen",
+    "tags": [
+      "Schokoladig",
+      "Klassisch"
+    ],
+    "image": "img/A_digital_photograph_showcases_a_freshly_baked_mar.png",
+    "ingredients": "200g Butter, 200g Zucker, 4 Eier, 200g Mehl, 50g Kakao, 1 TL Backpulver, 150ml Milch, 100g Zartbitterschokolade",
+    "instructions": "Backofen auf 175°C vorheizen. Butter und Zucker cremig rühren. Eier einzeln zugeben. Trockene Zutaten mischen und abwechselnd mit Milch einrühren. Teig teilen, marmorieren und 5060 Minuten backen."
+  },
+  {
+    "title": "Saftiger Schokokuchen",
+    "category": "Kuchen",
+    "tags": [
+      "Schokoladig",
+      "Saftig"
+    ],
+    "image": "img/A_photograph_displays_a_chocolate_marble_cake,_a_m.png",
+    "ingredients": "200g Butter, 200g Zucker, 4 Eier, 200g Mehl, 50g Kakao, 1 TL Backpulver, 150ml Milch, 100g Schokolade",
+    "instructions": "Alle Zutaten verrühren, Schokolade unterheben, in die Form füllen und 3035 Minuten backen."
+  },
+  {
+    "title": "Himbeer-Weiße-Schokolade-Kuchen",
+    "category": "Kuchen",
+    "tags": [
+      "Fruchtig",
+      "Beeren",
+      "Weiße Schokolade"
+    ],
+    "image": "img/A_photograph_displays_a_chocolate_marble_cake,_a_m.png",
+    "ingredients": "200g Butter, 200g Zucker, 4 Eier, 200g Mehl, 200g weiße Schokolade, 200g Himbeeren",
+    "instructions": "Teig rühren, Schokolade hacken, Himbeeren unterheben, in Form füllen und 3035 Minuten backen."
+  },
+  {
+    "title": "Käsekuchen Klassisch",
+    "category": "Torte",
+    "tags": [
+      "Cremig",
+      "Klassiker"
+    ],
+    "image": "img/A_digital_photograph_showcases_a_freshly_baked_mar.png",
+    "ingredients": "500g Quark, 200g Frischkäse, 150g Zucker, 3 Eier, Vanillezucker, Zitrone, Boden",
+    "instructions": "Masse cremig rühren, auf Boden geben und 55 Minuten bei 160°C backen. Abkühlen lassen."
+  }
+]

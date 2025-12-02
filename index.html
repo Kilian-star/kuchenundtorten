@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kuchen & Torten  Rezepte</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f6edff" />
+
+  <script>
+    // register service worker for offline support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').catch(()=>{});
+      });
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="oben">
+    <div class="header-inner">
+      <h1>Kuchen &amp; Torten</h1>
+      <p class="tagline">Rezepte  modern, fein, köstlich</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="search-wrap" id="suggestions">
+        <input id="searchInput" class="input" placeholder="Suche nach Rezepten oder Zutaten&" autocomplete="off" />
+        <div id="suggestionsBox" class="suggestions-box" aria-hidden="true"></div>
+      </div>
+
+      <div class="actions">
+        <select id="categorySelect" class="but">
+          <option value="all">Alle Kategorien</option>
+        </select>
+        <button class="but" id="clearButton" title="Suchfeld leeren">Leeren</button>
+        <button class="but" id="showFavorites" title="Meine Favoriten">P Favoriten</button>
+        <button class="but" id="themeToggle" title="Dark / Light"><</button>
+      </div>
+    </section>
+
+    <div id="tagContainer" class="tag-container" aria-label="Tags"></div>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="results" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="mailto:kilian.mro@outlook.de">Schreibe mir ein Rezept</a> " <a href="#oben">Nach oben</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
