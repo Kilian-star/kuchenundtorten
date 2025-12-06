@@ -83,7 +83,7 @@ body{
 
 /* status & footer */
 .status{margin-top:10px;color:var(--muted)}
-.site-footer{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(90deg,var(--accent-2),#caa6ff);color:#fff;padding:12px;text-align:center;font-size:0.9rem}
+.site-footer{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(90deg,var(--accent-2),#caa6ff);color:#fff;padding:12px;text-align:center;font-size:0.9rem;height:10px}
 
 /* responsive */
 @media(max-width:640px){
