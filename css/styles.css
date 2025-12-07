@@ -1,211 +1,165 @@
 /* ============================
-   Allgemein
+   Global
 ============================ */
 body {
-  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  background: #faf7ff;
+  font-family: "Inter", sans-serif;
+  background: #f7f5ff;
   color: #2e2e2e;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .dark {
-  background: #18131f;
+  background: #18121f;
   color: #f0eaff;
 }
 
-h1, h2 {
+h1 {
   text-align: center;
+  margin-top: 20px;
 }
 
 /* ============================
    Header / Suche
 ============================ */
 .header {
-  padding: 20px;
   text-align: center;
+  padding: 20px 0;
 }
 
 #searchInput {
-  padding: 10px;
   width: 80%;
   max-width: 450px;
+  padding: 12px;
   font-size: 1rem;
-  border-radius: 12px;
-  border: 2px solid #d7caff;
-  outline: none;
+  border-radius: 14px;
+  border: 2px solid #d5caff;
   transition: 0.2s;
 }
 
 #searchInput:focus {
-  border-color: #a88aff;
+  border-color: #a488ff;
 }
 
 #categorySelect {
-  margin-top: 10px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: 2px solid #d7caff;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 2px solid #d5caff;
   background: white;
 }
 
-button {
-  cursor: pointer;
-}
-
 /* ============================
-   Tag Container
+   Tags (Deutlich schöner)
 ============================ */
-#tagContainer {
-  padding: 10px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 8px;
+  margin: 10px 0 15px;
 }
 
-/* *** VERBESSERTE TAGS *** */
 .tag {
-  display: inline-block;
-  margin: 5px 0;
-  padding: 6px 12px;
-  background: #e6ddff;
+  padding: 6px 14px;
+  background: #e9e2ff;
   border-radius: 12px;
-  border: none;
   font-size: 0.85rem;
-  transition: 0.2s;
-
-  /* Lange Tags hübsch abgeschnitten */
+  border: none;
   white-space: nowrap;
-  max-width: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .tag:hover {
-  background: #d1c3ff;
+  background: #d3c4ff;
 }
 
 .tag.active {
-  background: #b899ff;
-  color: #fff;
+  background: #b79aff;
+  color: white;
 }
 
 /* ============================
    Rezeptkarten
 ============================ */
 #results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 25px;
   width: 90%;
   margin: 30px auto;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .recipe-card {
   background: white;
-  padding: 0;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: 0.25s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.25s ease;
 }
 
 .recipe-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 7px 20px rgba(0,0,0,0.12);
 }
 
 .recipe-card img {
   width: 100%;
-  height: 200px;
+  height: 210px;
   object-fit: cover;
 }
 
 .recipe-content {
-  padding: 18px;
+  padding: 18px 20px;
+}
+
+.recipe-content h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
 }
 
 /* ============================
-   Buttons oben
+   Buttons
 ============================ */
 #showFavorites,
 #clearButton,
 #themeToggle {
-  margin: 10px;
-  padding: 10px 14px;
-  background: #e6ddff;
-  border-radius: 10px;
+  margin: 10px 6px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #e9e2ff;
   border: none;
   font-weight: 600;
-  transition: 0.25s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 #showFavorites:hover,
 #clearButton:hover,
 #themeToggle:hover {
-  background: #cdbdff;
+  background: #d1c4ff;
 }
 
-/* ============================
-   Favoriten Button (mit Puff)
-============================ */
 .fav-btn {
-  margin-top: 12px;
-  padding: 10px 14px;
-  background: #e8ddff;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #5b2ac7;
   width: 100%;
-  text-align: center;
-  transition: 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-
-  position: relative;
-  overflow: visible; /* wichtig für Puff */
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #e9e2ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
 .fav-btn:hover {
-  background: #d4c1ff;
+  background: #d1c4ff;
 }
 
 .fav-btn.active {
-  background: #c7afff;
-  color: #4a1fb2;
-}
-
-/* Puff-Partikel */
-.puff {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: #b684ff;
-  border-radius: 50%;
-  animation: puffAnim 0.9s ease-out forwards;
-  pointer-events: none;
-  opacity: 0.9;
-}
-
-/* Puff Animation */
-@keyframes puffAnim {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(var(--dx), var(--dy)) scale(0.3);
-    opacity: 0;
-  }
+  background: #b79aff;
+  color: white;
 }
 
 /* ============================
@@ -213,16 +167,16 @@ button {
 ============================ */
 footer {
   margin-top: 50px;
-  background: #e6ddff;
   padding: 25px 0;
   text-align: center;
+  background: #e9e2ff;
   border-radius: 20px 20px 0 0;
 }
 
 footer a {
-  color: #5b2ac7;
-  text-decoration: none;
+  color: #5a38c7;
   font-weight: 600;
+  text-decoration: none;
 }
 
 footer a:hover {
@@ -230,35 +184,30 @@ footer a:hover {
 }
 
 /* ============================
-   Dark Mode
+   Dark mode overrides
 ============================ */
 .dark .recipe-card {
-  background: #2a2330;
+  background: #241b2f;
   color: #eee;
-}
-
-.dark #searchInput,
-.dark #categorySelect {
-  background: #32293d;
-  color: #eee;
-  border-color: #6d4cc5;
-}
-
-.dark footer {
-  background: #2a2330;
 }
 
 .dark .tag {
-  background: #4a3a63;
+  background: #3a2a55;
   color: #eee;
 }
 
 .dark .fav-btn {
-  background: #4a3a63;
-  color: #f0eaff;
+  background: #3a2a55;
+  color: #eee;
 }
 
-.dark .fav-btn.active {
-  background: #6d4cc5;
-  color: white;
+.dark footer {
+  background: #241b2f;
+}
+
+.dark #searchInput,
+.dark #categorySelect {
+  background: #2d223a;
+  border-color: #6b4cc7;
+  color: #eee;
 }
