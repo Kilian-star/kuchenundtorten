@@ -1,156 +1,210 @@
-/* ===== Grundlayout ===== */
+// =======================
+// Rezepte laden
+// =======================
+async function loadRecipes() {
+  try {
+    const res = await fetch("rezepte.json");
+    const recipes = await res.json();
+    window.allRecipes = recipes;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    fillCategories(recipes);
+    fillTags(recipes);
+    renderRecipes(recipes);
+  } catch (err) {
+    console.error("Fehler beim Laden der Rezepte:", err);
+    document.getElementById("status").textContent =
+      "❗ Fehler beim Laden der Rezepte.";
+  }
 }
 
-html, body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #faf7ff;
-  color: #333;
-  min-height: 100%;
-  scroll-behavior: smooth;
+// =======================
+// Rezepte rendern
+// =======================
+function renderRecipes(recipes) {
+  const container = document.getElementById("results");
+  container.innerHTML = "";
+
+  if (!recipes.length) {
+    container.innerHTML = "<p>Keine Rezepte gefunden.</p>";
+    return;
+  }
+
+  recipes.forEach(recipe => {
+    const card = document.createElement("div");
+    card.className = "recipe-card";
+
+    const isFav = isFavorite(recipe.title);
+
+    card.innerHTML = `
+      <img src="${recipe.image}" alt="${recipe.title}">
+      <div class="recipe-content">
+        <h2>${recipe.title}</h2>
+
+        <div class="tags">
+          ${recipe.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+        </div>
+
+        <p><strong>Zutaten:</strong> ${recipe.ingredients}</p>
+        <p><strong>Anleitung:</strong> ${recipe.instructions}</p>
+
+        <button class="fav-btn ${isFav ? "active" : ""}" data-title="${recipe.title}">
+          ${isFav ? "⭐ Favorit" : "☆ Als Favorit"}
+        </button>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  document.querySelectorAll(".fav-btn").forEach(btn => {
+    btn.addEventListener("click", toggleFavorite);
+  });
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+// =======================
+// Kategorien
+// =======================
+function fillCategories(recipes) {
+  const select = document.getElementById("categorySelect");
+
+  const categories = [...new Set(recipes.map(r => r.category))];
+
+  categories.forEach(cat => {
+    const op = document.createElement("option");
+    op.value = cat;
+    op.textContent = cat;
+    select.appendChild(op);
+  });
 }
 
-/* ===== Header ===== */
+// =======================
+// Tags
+// =======================
+function fillTags(recipes) {
+  const tagContainer = document.getElementById("tagContainer");
 
-.site-header {
-  background: linear-gradient(135deg, #d4b6ff, #b28cff);
-  padding: 25px 20px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  margin-bottom: 20px;
+  const allTags = [...new Set(recipes.flatMap(r => r.tags))];
+
+  allTags.forEach(tag => {
+    const el = document.createElement("button");
+    el.className = "tag";
+    el.textContent = tag;
+    el.addEventListener("click", () => {
+      el.classList.toggle("active");
+      filterRecipes();
+    });
+    tagContainer.appendChild(el);
+  });
 }
 
-.site-header h1 {
-  font-size: 2rem;
-  letter-spacing: 1px;
+// =======================
+// Filter (Suche + Kategorie + Tags)
+// =======================
+function filterRecipes() {
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const category = document.getElementById("categorySelect").value;
+  const activeTags = [...document.querySelectorAll(".tag.active")].map(t => t.textContent);
+
+  let filtered = window.allRecipes.filter(r => {
+    const matchesSearch =
+      r.title.toLowerCase().includes(search) ||
+      r.ingredients.toLowerCase().includes(search);
+
+    const matchesCategory =
+      category === "all" || r.category === category;
+
+    const matchesTags =
+      activeTags.length === 0 ||
+      activeTags.every(tag => r.tags.includes(tag));
+
+    return matchesSearch && matchesCategory && matchesTags;
+  });
+
+  renderRecipes(filtered);
 }
 
-/* ===== Container ===== */
+document.getElementById("searchInput").addEventListener("input", filterRecipes);
+document.getElementById("categorySelect").addEventListener("change", filterRecipes);
 
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
+// =======================
+// Favoriten (mit Puff-Effekt)
+// =======================
+function toggleFavorite(e) {
+  const btn = e.target;
+  const title = btn.dataset.title;
+
+  let favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  const isFav = favs.includes(title);
+
+  if (isFav) {
+    favs = favs.filter(t => t !== title);
+  } else {
+    favs.push(title);
+    createPuffEffect(btn);
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favs));
+  filterRecipes();
 }
 
-/* ===== Suchleiste & Buttons ===== */
-
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+function isFavorite(title) {
+  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+  return favs.includes(title);
 }
 
-.input {
-  flex: 1;
-  padding: 10px 14px;
-  border: 2px solid #c5a6ff;
-  border-radius: 8px;
-  font-size: 1rem;
-  outline: none;
+document.getElementById("showFavorites").addEventListener("click", () => {
+  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const filtered = window.allRecipes.filter(r => favs.includes(r.title));
+  renderRecipes(filtered);
+});
+
+document.getElementById("clearButton").addEventListener("click", () => {
+  document.getElementById("searchInput").value = "";
+  document.querySelectorAll(".tag.active").forEach(t => t.classList.remove("active"));
+  document.getElementById("categorySelect").value = "all";
+  renderRecipes(window.allRecipes);
+});
+
+// =======================
+// Puff-Effekt
+// =======================
+function createPuffEffect(button) {
+  for (let i = 0; i < 8; i++) {
+    const puff = document.createElement("div");
+    puff.classList.add("puff");
+
+    const angle = Math.random() * 2 * Math.PI;
+    const distance = 40 + Math.random() * 20;
+
+    const dx = Math.cos(angle) * distance + "px";
+    const dy = Math.sin(angle) * distance + "px";
+
+    puff.style.setProperty("--dx", dx);
+    puff.style.setProperty("--dy", dy);
+
+    puff.style.left = "50%";
+    puff.style.top = "50%";
+
+    button.appendChild(puff);
+
+    setTimeout(() => puff.remove(), 600);
+  }
 }
 
-.but {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 8px;
-  background: #c5a6ff;
-  color: white;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: 0.2s;
+// =======================
+// Darkmode
+// =======================
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("darkmode", document.body.classList.contains("dark") ? "1" : "0");
+});
+
+if (localStorage.getItem("darkmode") === "1") {
+  document.body.classList.add("dark");
 }
 
-.but:hover {
-  background: #b28cff;
-}
-
-/* ===== Rezepte Grid ===== */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
-}
-
-.recipe-card {
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.recipe-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-}
-
-.recipe-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-}
-
-.recipe-content {
-  padding: 15px;
-}
-
-.recipe-content h2 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-/* ===== Tags ===== */
-
-.tag {
-  display: inline-block;
-  background: #e8d7ff;
-  color: #5a2ea6;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin: 2px;
-}
-
-/* ===== Footer ===== */
-
-.site-footer {
-  margin-top: auto;
-  padding: 25px 15px;
-  text-align: center;
-  background: #f3e9ff;
-  border-top: 3px solid #c5a6ff;
-  color: #333;
-  font-size: 0.95rem;
-  box-shadow: 0 -3px 10px rgba(0,0,0,0.08);
-}
-
-.site-footer a {
-  color: #6a35c8;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.site-footer a:hover {
-  color: #a676ff;
-}
-
-#toTop {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-}
+// =======================
+// Start
+// =======================
+loadRecipes();
