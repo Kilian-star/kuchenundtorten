@@ -1,23 +1,24 @@
-// =======================
+// ============================
 // Rezepte laden
-// =======================
+// ============================
 async function loadRecipes() {
   try {
     const res = await fetch("rezepte.json");
     const recipes = await res.json();
+
     window.allRecipes = recipes;
 
     fillCategories(recipes);
     fillTags(recipes);
     renderRecipes(recipes);
   } catch (err) {
-    console.error("Fehler beim Laden der Rezepte:", err);
+    console.error("Rezepte konnten nicht geladen werden:", err);
   }
 }
 
-// =======================
-// Rezepte anzeigen
-// =======================
+// ============================
+// Rendering
+// ============================
 function renderRecipes(recipes) {
   const container = document.getElementById("results");
   container.innerHTML = "";
@@ -28,13 +29,13 @@ function renderRecipes(recipes) {
   }
 
   recipes.forEach(recipe => {
+    const isFav = isFavorite(recipe.title);
+
     const card = document.createElement("div");
     card.className = "recipe-card";
 
-    const isFav = isFavorite(recipe.title);
-
     card.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.title}">
+      <img src="${recipe.image}" />
       <div class="recipe-content">
         <h2>${recipe.title}</h2>
 
@@ -59,9 +60,9 @@ function renderRecipes(recipes) {
   });
 }
 
-// =======================
+// ============================
 // Kategorien
-// =======================
+// ============================
 function fillCategories(recipes) {
   const select = document.getElementById("categorySelect");
 
@@ -75,9 +76,9 @@ function fillCategories(recipes) {
   });
 }
 
-// =======================
+// ============================
 // Tags
-// =======================
+// ============================
 function fillTags(recipes) {
   const tagContainer = document.getElementById("tagContainer");
 
@@ -87,23 +88,25 @@ function fillTags(recipes) {
     const el = document.createElement("button");
     el.className = "tag";
     el.textContent = tag;
+
     el.addEventListener("click", () => {
       el.classList.toggle("active");
       filterRecipes();
     });
+
     tagContainer.appendChild(el);
   });
 }
 
-// =======================
-// Filtern
-// =======================
+// ============================
+// Filter
+// ============================
 function filterRecipes() {
   const search = document.getElementById("searchInput").value.toLowerCase();
   const category = document.getElementById("categorySelect").value;
   const activeTags = [...document.querySelectorAll(".tag.active")].map(t => t.textContent);
 
-  let filtered = window.allRecipes.filter(r => {
+  const filtered = window.allRecipes.filter(r => {
     const matchesSearch =
       r.title.toLowerCase().includes(search) ||
       r.ingredients.toLowerCase().includes(search);
@@ -121,12 +124,13 @@ function filterRecipes() {
   renderRecipes(filtered);
 }
 
+// Event Listener
 document.getElementById("searchInput").addEventListener("input", filterRecipes);
 document.getElementById("categorySelect").addEventListener("change", filterRecipes);
 
-// =======================
-// Favoriten + große Puff Animation
-// =======================
+// ============================
+// Favoriten
+// ============================
 function toggleFavorite(e) {
   const btn = e.target;
   const title = btn.dataset.title;
@@ -139,7 +143,6 @@ function toggleFavorite(e) {
     favs = favs.filter(t => t !== title);
   } else {
     favs.push(title);
-    createPuffEffect(btn);
   }
 
   localStorage.setItem("favorites", JSON.stringify(favs));
@@ -151,35 +154,9 @@ function isFavorite(title) {
   return favs.includes(title);
 }
 
-// =======================
-// Große Puff Explosion
-// =======================
-function createPuffEffect(button) {
-  for (let i = 0; i < 12; i++) {
-    const puff = document.createElement("div");
-    puff.classList.add("puff");
-
-    const angle = Math.random() * Math.PI * 2;
-    const distance = 60 + Math.random() * 60;
-
-    const dx = Math.cos(angle) * distance + "px";
-    const dy = Math.sin(angle) * distance + "px";
-
-    puff.style.setProperty("--dx", dx);
-    puff.style.setProperty("--dy", dy);
-
-    puff.style.left = "50%";
-    puff.style.top = "50%";
-
-    button.appendChild(puff);
-
-    setTimeout(() => puff.remove(), 1000);
-  }
-}
-
-// =======================
-// Darkmode
-// =======================
+// ============================
+// Dark Mode
+// ============================
 document.getElementById("themeToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
   localStorage.setItem("darkmode", document.body.classList.contains("dark") ? "1" : "0");
@@ -189,7 +166,7 @@ if (localStorage.getItem("darkmode") === "1") {
   document.body.classList.add("dark");
 }
 
-// =======================
+// ============================
 // Start
-// =======================
+// ============================
 loadRecipes();
