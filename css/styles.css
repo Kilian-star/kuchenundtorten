@@ -1,210 +1,246 @@
-// =======================
-// Rezepte laden
-// =======================
-async function loadRecipes() {
-  try {
-    const res = await fetch("rezepte.json");
-    const recipes = await res.json();
-    window.allRecipes = recipes;
+/* ================================
+   Global
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    fillCategories(recipes);
-    fillTags(recipes);
-    renderRecipes(recipes);
-  } catch (err) {
-    console.error("Fehler beim Laden der Rezepte:", err);
-    document.getElementById("status").textContent =
-      "❗ Fehler beim Laden der Rezepte.";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f6ff;
+  color: #333;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #1b152b;
+  color: #f1eaff;
+}
+
+/* ================================
+   Header
+================================ */
+header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ================================
+   Suche & Filter
+================================ */
+#searchInput,
+#categorySelect,
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+#searchInput {
+  width: 60%;
+  max-width: 350px;
+  border: 2px solid #d8cfff;
+}
+
+#categorySelect {
+  background: #eee0ff;
+  border: 2px solid #d0b8ff;
+}
+
+#themeToggle {
+  background: #d7befc;
+  cursor: pointer;
+}
+
+#showFavorites {
+  background: #ffd8f0;
+}
+
+#clearButton {
+  background: #ffe0a8;
+}
+
+/* Darkmode Inputs */
+body.dark #searchInput {
+  background: #2b243d;
+  border-color: #7d5bff;
+  color: white;
+}
+
+body.dark #categorySelect {
+  background: #3e3157;
+  color: white;
+}
+
+body.dark button {
+  color: #fff;
+}
+
+/* ================================
+   Tags
+================================ */
+#tagContainer {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  background: #e3d4ff;
+  padding: 7px 12px;
+  border-radius: 8px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.tag:hover {
+  background: #ccb0ff;
+}
+
+.tag.active {
+  background: #bb9cff;
+  color: white;
+}
+
+/* ================================
+   Rezeptkarten
+================================ */
+#results {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.recipe-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s;
+}
+
+body.dark .recipe-card {
+  background: #2d2440;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.04);
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Kleinere Bilder */
+.recipe-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Textbereich */
+.recipe-content h2 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.recipe-content p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* ================================
+   Favoriten-Button + Puff
+================================ */
+.fav-btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #e8ddff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #5b2ac7;
+  width: 100%;
+  text-align: center;
+  transition: 0.25s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.fav-btn:hover {
+  background: #d4c1ff;
+}
+
+/* aktiv */
+.fav-btn.active {
+  background: #c7afff;
+  color: #4a1fb2;
+}
+
+/* Puff-Partikel */
+.puff {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #b790ff;
+  border-radius: 50%;
+  animation: puffAnim 0.6s ease-out forwards;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* ================================
+   Puff-Animation
+================================ */
+@keyframes puffAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(0.2);
+    opacity: 0;
   }
 }
 
-// =======================
-// Rezepte rendern
-// =======================
-function renderRecipes(recipes) {
-  const container = document.getElementById("results");
-  container.innerHTML = "";
-
-  if (!recipes.length) {
-    container.innerHTML = "<p>Keine Rezepte gefunden.</p>";
-    return;
-  }
-
-  recipes.forEach(recipe => {
-    const card = document.createElement("div");
-    card.className = "recipe-card";
-
-    const isFav = isFavorite(recipe.title);
-
-    card.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.title}">
-      <div class="recipe-content">
-        <h2>${recipe.title}</h2>
-
-        <div class="tags">
-          ${recipe.tags.map(t => `<span class="tag">${t}</span>`).join("")}
-        </div>
-
-        <p><strong>Zutaten:</strong> ${recipe.ingredients}</p>
-        <p><strong>Anleitung:</strong> ${recipe.instructions}</p>
-
-        <button class="fav-btn ${isFav ? "active" : ""}" data-title="${recipe.title}">
-          ${isFav ? "⭐ Favorit" : "☆ Als Favorit"}
-        </button>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-
-  document.querySelectorAll(".fav-btn").forEach(btn => {
-    btn.addEventListener("click", toggleFavorite);
-  });
+/* ================================
+   Footer
+================================ */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: #efe5ff;
+  border-radius: 12px;
 }
 
-// =======================
-// Kategorien
-// =======================
-function fillCategories(recipes) {
-  const select = document.getElementById("categorySelect");
-
-  const categories = [...new Set(recipes.map(r => r.category))];
-
-  categories.forEach(cat => {
-    const op = document.createElement("option");
-    op.value = cat;
-    op.textContent = cat;
-    select.appendChild(op);
-  });
+body.dark footer {
+  background: #30264a;
 }
 
-// =======================
-// Tags
-// =======================
-function fillTags(recipes) {
-  const tagContainer = document.getElementById("tagContainer");
-
-  const allTags = [...new Set(recipes.flatMap(r => r.tags))];
-
-  allTags.forEach(tag => {
-    const el = document.createElement("button");
-    el.className = "tag";
-    el.textContent = tag;
-    el.addEventListener("click", () => {
-      el.classList.toggle("active");
-      filterRecipes();
-    });
-    tagContainer.appendChild(el);
-  });
+footer a {
+  color: #5b2ac7;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-// =======================
-// Filter (Suche + Kategorie + Tags)
-// =======================
-function filterRecipes() {
-  const search = document.getElementById("searchInput").value.toLowerCase();
-  const category = document.getElementById("categorySelect").value;
-  const activeTags = [...document.querySelectorAll(".tag.active")].map(t => t.textContent);
-
-  let filtered = window.allRecipes.filter(r => {
-    const matchesSearch =
-      r.title.toLowerCase().includes(search) ||
-      r.ingredients.toLowerCase().includes(search);
-
-    const matchesCategory =
-      category === "all" || r.category === category;
-
-    const matchesTags =
-      activeTags.length === 0 ||
-      activeTags.every(tag => r.tags.includes(tag));
-
-    return matchesSearch && matchesCategory && matchesTags;
-  });
-
-  renderRecipes(filtered);
+body.dark footer a {
+  color: #c9afff;
 }
-
-document.getElementById("searchInput").addEventListener("input", filterRecipes);
-document.getElementById("categorySelect").addEventListener("change", filterRecipes);
-
-// =======================
-// Favoriten (mit Puff-Effekt)
-// =======================
-function toggleFavorite(e) {
-  const btn = e.target;
-  const title = btn.dataset.title;
-
-  let favs = JSON.parse(localStorage.getItem("favorites") || "[]");
-
-  const isFav = favs.includes(title);
-
-  if (isFav) {
-    favs = favs.filter(t => t !== title);
-  } else {
-    favs.push(title);
-    createPuffEffect(btn);
-  }
-
-  localStorage.setItem("favorites", JSON.stringify(favs));
-  filterRecipes();
-}
-
-function isFavorite(title) {
-  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
-  return favs.includes(title);
-}
-
-document.getElementById("showFavorites").addEventListener("click", () => {
-  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
-  const filtered = window.allRecipes.filter(r => favs.includes(r.title));
-  renderRecipes(filtered);
-});
-
-document.getElementById("clearButton").addEventListener("click", () => {
-  document.getElementById("searchInput").value = "";
-  document.querySelectorAll(".tag.active").forEach(t => t.classList.remove("active"));
-  document.getElementById("categorySelect").value = "all";
-  renderRecipes(window.allRecipes);
-});
-
-// =======================
-// Puff-Effekt
-// =======================
-function createPuffEffect(button) {
-  for (let i = 0; i < 8; i++) {
-    const puff = document.createElement("div");
-    puff.classList.add("puff");
-
-    const angle = Math.random() * 2 * Math.PI;
-    const distance = 40 + Math.random() * 20;
-
-    const dx = Math.cos(angle) * distance + "px";
-    const dy = Math.sin(angle) * distance + "px";
-
-    puff.style.setProperty("--dx", dx);
-    puff.style.setProperty("--dy", dy);
-
-    puff.style.left = "50%";
-    puff.style.top = "50%";
-
-    button.appendChild(puff);
-
-    setTimeout(() => puff.remove(), 600);
-  }
-}
-
-// =======================
-// Darkmode
-// =======================
-document.getElementById("themeToggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("darkmode", document.body.classList.contains("dark") ? "1" : "0");
-});
-
-if (localStorage.getItem("darkmode") === "1") {
-  document.body.classList.add("dark");
-}
-
-// =======================
-// Start
-// =======================
-loadRecipes();
