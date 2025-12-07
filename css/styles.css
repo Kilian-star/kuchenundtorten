@@ -23,6 +23,50 @@ h1 {
 /* ============================
    Header / Suche
 ============================ */
+/* ZENTRIER-RESET für Header + Controls */
+.site-header, .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* horizontal zentrieren */
+  justify-content: center;   /* vertikal zentrieren (falls Höhe vorhanden) */
+  gap: 12px;
+  padding: 24px 0;
+  text-align: center;
+}
+
+/* Controls (Input + Buttons) mittig und responsiv anordnen */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;   /* HIER sorgt dafür, dass Items zentriert bleiben */
+  align-items: center;
+  width: 100%;
+  max-width: 920px;          /* optional, damit die Controls nicht zu breit werden */
+  margin: 0 auto;
+  padding: 6px;
+}
+
+/* Search-Input: block + automatisch zentriert */
+#searchInput {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 520px;
+  min-width: 200px;
+}
+
+/* Buttons optisch unter/nebeneinander und zentriert */
+#showFavorites, #clearButton, #themeToggle {
+  flex: 0 0 auto;            /* verhindern, dass Buttons die ganze Breite einnehmen */
+  margin: 0 6px;
+}
+
+/* Kleiner Anpassungs-Hack: falls ein anderer CSS-rule "float" o.ä. nutzt */
+.controls .tag, .controls input, .controls button {
+  float: none !important;
+}
+
 .header {
   display: flex;
   flex-direction: column;
