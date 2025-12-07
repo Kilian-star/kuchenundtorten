@@ -1,0 +1,70 @@
+/* ===== Basislayout ===== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #faf7ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.page-wrapper {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Überschriften ===== */
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #7a3eff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #5a2ea6;
+}
+
+/* ===== Links ===== */
+
+a {
+  color: #7a3eff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #a577ff;
+  text-decoration: underline;
+}
+
+/* ===== Listen ===== */
+
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* ===== Button zurück ===== */
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 14px;
+  background: #e5d9ff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background: #d1c0ff;
+}
