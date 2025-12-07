@@ -12,13 +12,11 @@ async function loadRecipes() {
     renderRecipes(recipes);
   } catch (err) {
     console.error("Fehler beim Laden der Rezepte:", err);
-    document.getElementById("status").textContent =
-      "❗ Fehler beim Laden der Rezepte.";
   }
 }
 
 // =======================
-// Rezepte rendern
+// Rezepte anzeigen
 // =======================
 function renderRecipes(recipes) {
   const container = document.getElementById("results");
@@ -98,7 +96,7 @@ function fillTags(recipes) {
 }
 
 // =======================
-// Filter (Suche + Kategorie + Tags)
+// Filtern
 // =======================
 function filterRecipes() {
   const search = document.getElementById("searchInput").value.toLowerCase();
@@ -127,7 +125,7 @@ document.getElementById("searchInput").addEventListener("input", filterRecipes);
 document.getElementById("categorySelect").addEventListener("change", filterRecipes);
 
 // =======================
-// Favoriten (mit Puff-Effekt)
+// Favoriten + Puff
 // =======================
 function toggleFavorite(e) {
   const btn = e.target;
@@ -153,28 +151,13 @@ function isFavorite(title) {
   return favs.includes(title);
 }
 
-document.getElementById("showFavorites").addEventListener("click", () => {
-  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
-  const filtered = window.allRecipes.filter(r => favs.includes(r.title));
-  renderRecipes(filtered);
-});
-
-document.getElementById("clearButton").addEventListener("click", () => {
-  document.getElementById("searchInput").value = "";
-  document.querySelectorAll(".tag.active").forEach(t => t.classList.remove("active"));
-  document.getElementById("categorySelect").value = "all";
-  renderRecipes(window.allRecipes);
-});
-
-// =======================
-// Puff-Effekt
-// =======================
+// Puff Effekt
 function createPuffEffect(button) {
   for (let i = 0; i < 8; i++) {
     const puff = document.createElement("div");
     puff.classList.add("puff");
 
-    const angle = Math.random() * 2 * Math.PI;
+    const angle = Math.random() * Math.PI * 2;
     const distance = 40 + Math.random() * 20;
 
     const dx = Math.cos(angle) * distance + "px";
@@ -191,6 +174,19 @@ function createPuffEffect(button) {
     setTimeout(() => puff.remove(), 600);
   }
 }
+
+document.getElementById("showFavorites").addEventListener("click", () => {
+  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const filtered = window.allRecipes.filter(r => favs.includes(r.title));
+  renderRecipes(filtered);
+});
+
+document.getElementById("clearButton").addEventListener("click", () => {
+  document.getElementById("searchInput").value = "";
+  document.querySelectorAll(".tag.active").forEach(t => t.classList.remove("active"));
+  document.getElementById("categorySelect").value = "all";
+  renderRecipes(window.allRecipes);
+});
 
 // =======================
 // Darkmode
