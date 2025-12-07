@@ -15,7 +15,7 @@ body {
   color: #f0eaff;
 }
 
-h1 {
+h1,h3 {
   text-align: center;
   margin-top: 20px;
 }
