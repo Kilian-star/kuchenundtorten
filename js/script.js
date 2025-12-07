@@ -17,9 +17,8 @@ async function loadRecipes() {
   }
 }
 
-
 // =======================
-// Rezepte anzeigen
+// Rezepte rendern
 // =======================
 function renderRecipes(recipes) {
   const container = document.getElementById("results");
@@ -48,7 +47,7 @@ function renderRecipes(recipes) {
         <p><strong>Zutaten:</strong> ${recipe.ingredients}</p>
         <p><strong>Anleitung:</strong> ${recipe.instructions}</p>
 
-        <button class="fav-btn" data-title="${recipe.title}">
+        <button class="fav-btn ${isFav ? "active" : ""}" data-title="${recipe.title}">
           ${isFav ? "⭐ Favorit" : "☆ Als Favorit"}
         </button>
       </div>
@@ -57,15 +56,13 @@ function renderRecipes(recipes) {
     container.appendChild(card);
   });
 
-  // Listener für Favoriten
   document.querySelectorAll(".fav-btn").forEach(btn => {
     btn.addEventListener("click", toggleFavorite);
   });
 }
 
-
 // =======================
-// Kategorien füllen
+// Kategorien
 // =======================
 function fillCategories(recipes) {
   const select = document.getElementById("categorySelect");
@@ -80,9 +77,8 @@ function fillCategories(recipes) {
   });
 }
 
-
 // =======================
-// Tags füllen
+// Tags
 // =======================
 function fillTags(recipes) {
   const tagContainer = document.getElementById("tagContainer");
@@ -94,23 +90,20 @@ function fillTags(recipes) {
     el.className = "tag";
     el.textContent = tag;
     el.addEventListener("click", () => {
+      el.classList.toggle("active");
       filterRecipes();
     });
     tagContainer.appendChild(el);
   });
 }
 
-
 // =======================
-// Filterfunktion (Suche + Kategorie + Tags)
+// Filter (Suche + Kategorie + Tags)
 // =======================
 function filterRecipes() {
   const search = document.getElementById("searchInput").value.toLowerCase();
   const category = document.getElementById("categorySelect").value;
-
-  const activeTags = [...document.querySelectorAll(".tag.active")].map(
-    el => el.textContent
-  );
+  const activeTags = [...document.querySelectorAll(".tag.active")].map(t => t.textContent);
 
   let filtered = window.allRecipes.filter(r => {
     const matchesSearch =
@@ -130,43 +123,25 @@ function filterRecipes() {
   renderRecipes(filtered);
 }
 
-
-// =======================
-// Tag Klick
-// =======================
-document.addEventListener("click", e => {
-  if (e.target.classList.contains("tag")) {
-    e.target.classList.toggle("active");
-    filterRecipes();
-  }
-});
-
-
-// =======================
-// Suche
-// =======================
 document.getElementById("searchInput").addEventListener("input", filterRecipes);
-
-
-// =======================
-// Kategorie Dropdown
-// =======================
-document
-  .getElementById("categorySelect")
-  .addEventListener("change", filterRecipes);
-
+document.getElementById("categorySelect").addEventListener("change", filterRecipes);
 
 // =======================
-// Favoriten speichern
+// Favoriten (mit Puff-Effekt)
 // =======================
 function toggleFavorite(e) {
-  const title = e.target.dataset.title;
+  const btn = e.target;
+  const title = btn.dataset.title;
+
   let favs = JSON.parse(localStorage.getItem("favorites") || "[]");
 
-  if (favs.includes(title)) {
+  const isFav = favs.includes(title);
+
+  if (isFav) {
     favs = favs.filter(t => t !== title);
   } else {
     favs.push(title);
+    createPuffEffect(btn);
   }
 
   localStorage.setItem("favorites", JSON.stringify(favs));
@@ -191,23 +166,43 @@ document.getElementById("clearButton").addEventListener("click", () => {
   renderRecipes(window.allRecipes);
 });
 
+// =======================
+// Puff-Effekt
+// =======================
+function createPuffEffect(button) {
+  for (let i = 0; i < 8; i++) {
+    const puff = document.createElement("div");
+    puff.classList.add("puff");
+
+    const angle = Math.random() * 2 * Math.PI;
+    const distance = 40 + Math.random() * 20;
+
+    const dx = Math.cos(angle) * distance + "px";
+    const dy = Math.sin(angle) * distance + "px";
+
+    puff.style.setProperty("--dx", dx);
+    puff.style.setProperty("--dy", dy);
+
+    puff.style.left = "50%";
+    puff.style.top = "50%";
+
+    button.appendChild(puff);
+
+    setTimeout(() => puff.remove(), 600);
+  }
+}
 
 // =======================
-// Dark Mode
+// Darkmode
 // =======================
 document.getElementById("themeToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  localStorage.setItem(
-    "darkmode",
-    document.body.classList.contains("dark") ? "1" : "0"
-  );
+  localStorage.setItem("darkmode", document.body.classList.contains("dark") ? "1" : "0");
 });
 
-// Dark Mode laden
 if (localStorage.getItem("darkmode") === "1") {
   document.body.classList.add("dark");
 }
-
 
 // =======================
 // Start
