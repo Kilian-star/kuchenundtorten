@@ -1,132 +1,215 @@
-/* FINAL script.js - Elegant-Pastell edition */
-const el = id => document.getElementById(id);
+// =======================
+// Rezepte laden
+// =======================
+async function loadRecipes() {
+  try {
+    const res = await fetch("rezepte.json");
+    const recipes = await res.json();
+    window.allRecipes = recipes;
 
-let recipes = [];
-let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-let activeTags = new Set();
-let allTags = new Set();
-
-async function loadRecipes(){
-  try{
-   const res = await fetch('/kuchenundtorten/rezepte.json');
-    if(!res.ok) throw new Error('Could not load recipes');
-    recipes = await res.json();
-    collectTags();
-    populateCategories();
-    populateTags();
+    fillCategories(recipes);
+    fillTags(recipes);
     renderRecipes(recipes);
-  }catch(err){
-    console.error(err);
-    el('status').textContent = 'Fehler beim Laden der Rezepte.';
+  } catch (err) {
+    console.error("Fehler beim Laden der Rezepte:", err);
+    document.getElementById("status").textContent =
+      "❗ Fehler beim Laden der Rezepte.";
   }
 }
 
-function collectTags(){
-  recipes.forEach(r => (r.tags||[]).forEach(t => allTags.add(t)));
-}
 
-function populateCategories(){
-  const sel = el('categorySelect');
-  const cats = new Set(['all', ...recipes.map(r => r.category || 'Unkategorisiert')]);
-  cats.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c;
-    opt.textContent = c === 'all' ? 'Alle Kategorien' : c;
-    sel.appendChild(opt);
+// =======================
+// Rezepte anzeigen
+// =======================
+function renderRecipes(recipes) {
+  const container = document.getElementById("results");
+  container.innerHTML = "";
+
+  if (!recipes.length) {
+    container.innerHTML = "<p>Keine Rezepte gefunden.</p>";
+    return;
+  }
+
+  recipes.forEach(recipe => {
+    const card = document.createElement("div");
+    card.className = "recipe-card";
+
+    const isFav = isFavorite(recipe.title);
+
+    card.innerHTML = `
+      <img src="${recipe.image}" alt="${recipe.title}">
+      <div class="recipe-content">
+        <h2>${recipe.title}</h2>
+
+        <div class="tags">
+          ${recipe.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+        </div>
+
+        <p><strong>Zutaten:</strong> ${recipe.ingredients}</p>
+        <p><strong>Anleitung:</strong> ${recipe.instructions}</p>
+
+        <button class="fav-btn" data-title="${recipe.title}">
+          ${isFav ? "⭐ Favorit" : "☆ Als Favorit"}
+        </button>
+      </div>
+    `;
+
+    container.appendChild(card);
   });
-  sel.addEventListener('change', applyFilters);
+
+  // Listener für Favoriten
+  document.querySelectorAll(".fav-btn").forEach(btn => {
+    btn.addEventListener("click", toggleFavorite);
+  });
 }
 
-function populateTags(){
-  const container = el('tagContainer');
+
+// =======================
+// Kategorien füllen
+// =======================
+function fillCategories(recipes) {
+  const select = document.getElementById("categorySelect");
+
+  const categories = [...new Set(recipes.map(r => r.category))];
+
+  categories.forEach(cat => {
+    const op = document.createElement("option");
+    op.value = cat;
+    op.textContent = cat;
+    select.appendChild(op);
+  });
+}
+
+
+// =======================
+// Tags füllen
+// =======================
+function fillTags(recipes) {
+  const tagContainer = document.getElementById("tagContainer");
+
+  const allTags = [...new Set(recipes.flatMap(r => r.tags))];
+
   allTags.forEach(tag => {
-    const b = document.createElement('button');
-    b.className = 'but';
-    b.textContent = tag;
-    b.onclick = () => {
-      if(activeTags.has(tag)){ activeTags.delete(tag); b.style.boxShadow = 'none'; }
-      else { activeTags.add(tag); b.style.boxShadow = 'inset 0 0 0 2px rgba(127,76,204,0.18)'; }
-      applyFilters();
-    };
-    container.appendChild(b);
+    const el = document.createElement("button");
+    el.className = "tag";
+    el.textContent = tag;
+    el.addEventListener("click", () => {
+      filterRecipes();
+    });
+    tagContainer.appendChild(el);
   });
 }
 
-function applyFilters(){
-  const q = el('searchInput').value.trim().toLowerCase();
-  const cat = el('categorySelect').value;
-  const filtered = recipes.filter(r => {
-    const txt = (r.title + ' ' + (r.ingredients||'') + ' ' + (r.instructions||'')).toLowerCase();
-    const matchText = !q || txt.includes(q);
-    const matchCat = cat === 'all' || r.category === cat;
-    const matchTags = [...activeTags].every(t => (r.tags||[]).includes(t));
-    return matchText && matchCat && matchTags;
+
+// =======================
+// Filterfunktion (Suche + Kategorie + Tags)
+// =======================
+function filterRecipes() {
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const category = document.getElementById("categorySelect").value;
+
+  const activeTags = [...document.querySelectorAll(".tag.active")].map(
+    el => el.textContent
+  );
+
+  let filtered = window.allRecipes.filter(r => {
+    const matchesSearch =
+      r.title.toLowerCase().includes(search) ||
+      r.ingredients.toLowerCase().includes(search);
+
+    const matchesCategory =
+      category === "all" || r.category === category;
+
+    const matchesTags =
+      activeTags.length === 0 ||
+      activeTags.every(tag => r.tags.includes(tag));
+
+    return matchesSearch && matchesCategory && matchesTags;
   });
+
   renderRecipes(filtered);
 }
 
-function renderRecipes(list){
-  const container = el('results'); container.innerHTML = '';
-  if(!list || list.length === 0){
-    el('status').textContent = 'Keine Rezepte gefunden.';
-    return;
+
+// =======================
+// Tag Klick
+// =======================
+document.addEventListener("click", e => {
+  if (e.target.classList.contains("tag")) {
+    e.target.classList.toggle("active");
+    filterRecipes();
   }
-  el('status').textContent = `${list.length} Rezept(e) gefunden`;
-  list.forEach(r => {
-    const card = document.createElement('article');
-    card.className = 'card';
-    card.innerHTML = `
-      <div style="position:relative">
-        <button class="fav ${favorites.has(r.title)?'active':''}" aria-label="Favorit">${favorites.has(r.title)?'★':'☆'}</button>
-        <img src="${r.image || 'img/placeholder.jpg'}" alt="${r.title}">
-      </div>
-      <h3>${r.title}</h3>
-      <div class="meta">${r.category || ''} · ${(r.tags||[]).join(', ')}</div>
-      <details>
-        <summary>Zutaten & Zubereitung</summary>
-        <p><strong>Zutaten:</strong><br>${r.ingredients}</p>
-        <p><strong>Zubereitung:</strong><br>${r.instructions}</p>
-      </details>
-    `;
-    card.querySelector('.fav').addEventListener('click', ()=>{
-      toggleFavorite(r.title, card.querySelector('.fav'));
-    });
-    container.appendChild(card);
-  });
+});
+
+
+// =======================
+// Suche
+// =======================
+document.getElementById("searchInput").addEventListener("input", filterRecipes);
+
+
+// =======================
+// Kategorie Dropdown
+// =======================
+document
+  .getElementById("categorySelect")
+  .addEventListener("change", filterRecipes);
+
+
+// =======================
+// Favoriten speichern
+// =======================
+function toggleFavorite(e) {
+  const title = e.target.dataset.title;
+  let favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  if (favs.includes(title)) {
+    favs = favs.filter(t => t !== title);
+  } else {
+    favs.push(title);
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favs));
+  filterRecipes();
 }
 
-function toggleFavorite(title, btn){
-  if(favorites.has(title)){ favorites.delete(title); btn.classList.remove('active'); btn.textContent='☆'; }
-  else { favorites.add(title); btn.classList.add('active'); btn.textContent='★'; }
-  localStorage.setItem('favorites', JSON.stringify([...favorites]));
+function isFavorite(title) {
+  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+  return favs.includes(title);
 }
 
-el('searchInput').addEventListener('input', ()=>{
-  const q = el('searchInput').value.trim().toLowerCase();
-  if(!q){ el('suggestionsBox').style.display='none'; applyFilters(); return; }
-  const suggestions = recipes.filter(r => r.title.toLowerCase().includes(q)).slice(0,6);
-  const box = el('suggestionsBox'); box.innerHTML = '';
-  if(suggestions.length === 0){ box.style.display='none'; applyFilters(); return; }
-  suggestions.forEach(s => {
-    const b = document.createElement('button');
-    b.textContent = s.title;
-    b.onclick = ()=>{ el('searchInput').value = s.title; box.style.display='none'; applyFilters(); };
-    box.appendChild(b);
-  });
-  box.style.display='block';
-  applyFilters();
+document.getElementById("showFavorites").addEventListener("click", () => {
+  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const filtered = window.allRecipes.filter(r => favs.includes(r.title));
+  renderRecipes(filtered);
 });
 
-el('clearButton').addEventListener('click', ()=>{
-  el('searchInput').value=''; activeTags.clear(); el('categorySelect').value='all'; applyFilters();
+document.getElementById("clearButton").addEventListener("click", () => {
+  document.getElementById("searchInput").value = "";
+  document.querySelectorAll(".tag.active").forEach(t => t.classList.remove("active"));
+  document.getElementById("categorySelect").value = "all";
+  renderRecipes(window.allRecipes);
 });
-el('showFavorites').addEventListener('click', ()=> {
-  const favList = recipes.filter(r => favorites.has(r.title)); renderRecipes(favList);
-});
-el('themeToggle').addEventListener('click', ()=>{
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark')?'dark':'light');
-});
-(function(){ if(localStorage.getItem('theme')==='dark') document.body.classList.add('dark'); })();
 
-window.onload = loadRecipes;
+
+// =======================
+// Dark Mode
+// =======================
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  localStorage.setItem(
+    "darkmode",
+    document.body.classList.contains("dark") ? "1" : "0"
+  );
+});
+
+// Dark Mode laden
+if (localStorage.getItem("darkmode") === "1") {
+  document.body.classList.add("dark");
+}
+
+
+// =======================
+// Start
+// =======================
+loadRecipes();
