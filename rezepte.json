@@ -406,3 +406,165 @@
     "instructions": "Kuchen backen und auskühlen lassen. Glasur schmelzen, auftragen und fest werden lassen."
   }
 ]
+[
+  {
+    "title": "Schokokuchen mit Kirschen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Kirsche"],
+    "image": "img/schokokirsch.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Kakao, Kirschen",
+    "instructions": "Rührteig zubereiten. Kirschen unterheben und bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Bienenstich",
+    "category": "Kuchen",
+    "tags": ["Hefe", "Klassiker"],
+    "image": "img/bienenstich.png",
+    "ingredients": "Hefeteig, Vanillecreme, Mandeln, Honig",
+    "instructions": "Hefeteig backen. Mandelkruste aufbringen. Nach dem Abkühlen mit Vanillecreme füllen."
+  },
+  {
+    "title": "Schoko-Cheesecake",
+    "category": "Torte",
+    "tags": ["Schokolade", "Käse"],
+    "image": "img/schokocheese.png",
+    "ingredients": "Quark, Zucker, Eier, Kakao, Keksboden",
+    "instructions": "Käsemasse mit Kakao verrühren, auf Boden geben und bei 160°C ca. 55 Minuten backen."
+  },
+  {
+    "title": "Apfelkuchen vom Blech",
+    "category": "Kuchen",
+    "tags": ["Apfel", "Blechkuchen"],
+    "image": "img/apfelblech.png",
+    "ingredients": "Rührteig, Äpfel, Zucker, Zimt",
+    "instructions": "Teig aufs Blech streichen. Äpfel auflegen und bei 180°C ca. 40 Minuten backen."
+  },
+  {
+    "title": "Schoko-Haselnuss-Torte",
+    "category": "Torte",
+    "tags": ["Schokolade", "Nussig"],
+    "image": "img/schokonuss_torte.png",
+    "ingredients": "Schokobiskuit, Sahne, Haselnusscreme",
+    "instructions": "Böden backen. Sahne mit Nusscreme verrühren und schichten. Kühlen."
+  },
+  {
+    "title": "Zimtstreuselkuchen",
+    "category": "Kuchen",
+    "tags": ["Zimt", "Streusel"],
+    "image": "img/zimtstreusel.png",
+    "ingredients": "Rührteig, Butter, Zucker, Mehl, Zimt",
+    "instructions": "Teig vorbereiten. Zimtstreusel darüber geben und bei 180°C ca. 40 Minuten backen."
+  },
+  {
+    "title": "Cookies-and-Cream-Torte",
+    "category": "Torte",
+    "tags": ["Keks", "Cremig"],
+    "image": "img/cookiescream.png",
+    "ingredients": "Biskuit, Sahne, Kekse",
+    "instructions": "Biskuitboden backen. Sahne schlagen und mit Keksstücken schichten."
+  },
+  {
+    "title": "Schoko-Lava-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Flüssiger Kern"],
+    "image": "img/lava.png",
+    "ingredients": "Schokolade, Butter, Zucker, Eier, Mehl",
+    "instructions": "Teig anrühren, in Förmchen füllen und bei 200°C ca. 10 Minuten backen."
+  },
+  {
+    "title": "Vanillepudding-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Vanille", "Cremig"],
+    "image": "img/puddingkuchen.png",
+    "ingredients": "Rührteig, Vanillepudding",
+    "instructions": "Teig vorbereiten, Pudding darauf verteilen und bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Erdbeer-Joghurt-Torte",
+    "category": "Torte",
+    "tags": ["Erdbeere", "Leicht"],
+    "image": "img/erdbeerjoghurt.png",
+    "ingredients": "Biskuit, Joghurtcreme, Erdbeeren",
+    "instructions": "Biskuitboden backen. Joghurtcreme anrühren, Erdbeeren untermischen und schichten."
+  },
+  {
+    "title": "Nuss-Zopf-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Hefe", "Nuss"],
+    "image": "img/nusszopf.png",
+    "ingredients": "Hefeteig, Nussfüllung",
+    "instructions": "Teig ausrollen, füllen, flechten und bei 180°C ca. 35 Minuten backen."
+  },
+  {
+    "title": "Schoko-Mousse-Torte",
+    "category": "Torte",
+    "tags": ["Mousse", "Schokolade"],
+    "image": "img/schokomousse.png",
+    "ingredients": "Biskuit, Schokomousse",
+    "instructions": "Boden backen, Mousse darauf verteilen und mehrere Stunden kühlen."
+  },
+  {
+    "title": "Apfel-Karamell-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Apfel", "Karamell"],
+    "image": "img/apfelkaramell_kuchen.png",
+    "ingredients": "Rührteig, Äpfel, Karamell",
+    "instructions": "Teig zubereiten, Äpfel unterheben und nach dem Backen mit Karamell verzieren."
+  },
+  {
+    "title": "Milchmädchen-Torte",
+    "category": "Torte",
+    "tags": ["Cremig", "Süß"],
+    "image": "img/milchmaedchen.png",
+    "ingredients": "Biskuit, gezuckerte Kondensmilch, Sahne",
+    "instructions": "Böden backen. Creme aus Sahne und Kondensmilch herstellen und schichten."
+  },
+  {
+    "title": "Schoko-Zimt-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Zimt"],
+    "image": "img/schokozimt.png",
+    "ingredients": "Rührteig, Kakao, Zimt",
+    "instructions": "Teig anrühren, Kakao und Zimt unterheben und bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Vanille-Schoko-Torte",
+    "category": "Torte",
+    "tags": ["Vanille", "Schokolade"],
+    "image": "img/vanilleschoko.png",
+    "ingredients": "Biskuit, Vanillecreme, Schokolade",
+    "instructions": "Böden backen. Vanillecreme herstellen und mit Schokolade schichten."
+  },
+  {
+    "title": "Kaffee-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Kaffee", "Herb"],
+    "image": "img/kaffee.png",
+    "ingredients": "Rührteig, starker Kaffee",
+    "instructions": "Kaffee unter den Teig rühren, in Form füllen und bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Tiramisu-Torte",
+    "category": "Torte",
+    "tags": ["Kaffee", "Cremig"],
+    "image": "img/tiramisu.png",
+    "ingredients": "Biskuit, Mascarponecreme, Kaffee",
+    "instructions": "Böden tränken, Creme auftragen, schichten und kalt stellen."
+  },
+  {
+    "title": "Schoko-Mandel-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Mandel"],
+    "image": "img/schokomandel.png",
+    "ingredients": "Rührteig, Mandeln, Kakao",
+    "instructions": "Mandeln und Kakao unterheben und bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Finale Geburtstagstorte",
+    "category": "Torte",
+    "tags": ["Festlich", "Klassiker"],
+    "image": "img/geburtstag.png",
+    "ingredients": "Biskuit, Sahne, Dekoration",
+    "instructions": "Böden backen. Sahne schlagen, Torte füllen, dekorieren und kalt stellen."
+  }
+]
