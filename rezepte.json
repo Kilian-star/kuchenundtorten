@@ -80,3 +80,85 @@
     "instructions": "Biskuitböden backen. Sahne steif schlagen. Böden mit Sahne füllen und mit Kakao bestreuen."
   }
 ]
+[
+  {
+    "title": "Zitronenkuchen",
+    "category": "Kuchen",
+    "tags": ["Zitrone", "Frisch", "Klassiker"],
+    "image": "img/zitronenkuchen.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 1 Päckchen Backpulver, Saft und Schale von 2 Zitronen",
+    "instructions": "Butter und Zucker cremig rühren. Eier einzeln unterrühren. Mehl und Backpulver mischen und zusammen mit Zitronensaft und -schale unterheben. Teig in eine gefettete Form füllen und bei 175°C ca. 50 Minuten backen."
+  },
+  {
+    "title": "Marmorkuchen Klassisch",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Vanille", "Klassiker"],
+    "image": "img/marmorkuchen.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 30g Kakao, Milch",
+    "instructions": "Butter und Zucker cremig schlagen. Eier unterrühren. Mehl einarbeiten. Teig teilen, eine Hälfte mit Kakao und Milch verrühren, marmorieren und bei 175°C etwa 50 Minuten backen."
+  },
+  {
+    "title": "Apfel-Zimtkuchen",
+    "category": "Kuchen",
+    "tags": ["Apfel", "Zimt", "Herbst"],
+    "image": "img/apfelzimt.png",
+    "ingredients": "300g Mehl, 200g Zucker, 3 Eier, 150ml Öl, 3 Äpfel, Zimt",
+    "instructions": "Eier und Zucker schaumig schlagen. Öl und Mehl unterrühren. Äpfel würfeln, mit Zimt mischen und unterheben. Bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Schmandkuchen",
+    "category": "Kuchen",
+    "tags": ["Cremig", "Blechkuchen"],
+    "image": "img/schmandkuchen.png",
+    "ingredients": "300g Mehl, 150g Zucker, 2 Eier, 2 Becher Schmand, Vanillezucker",
+    "instructions": "Teig anrühren, Schmand unterheben und glatt streichen. Bei 180°C etwa 40 Minuten backen und auskühlen lassen."
+  },
+  {
+    "title": "Kirschkuchen",
+    "category": "Kuchen",
+    "tags": ["Kirsche", "Saftig"],
+    "image": "img/kirschkuchen.png",
+    "ingredients": "250g Butter, 180g Zucker, 4 Eier, 300g Mehl, 1 Glas Kirschen",
+    "instructions": "Rührteig zubereiten. Abgetropfte Kirschen unterheben oder auflegen. Bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Bananenkuchen",
+    "category": "Kuchen",
+    "tags": ["Banane", "Saftig"],
+    "image": "img/bananenkuchen.png",
+    "ingredients": "3 reife Bananen, 200g Zucker, 2 Eier, 250g Mehl, 1 TL Natron",
+    "instructions": "Bananen zerdrücken. Mit Zucker und Eiern verrühren. Mehl und Natron unterheben und bei 170°C ca. 50 Minuten backen."
+  },
+  {
+    "title": "Käsekuchen mit Boden",
+    "category": "Torte",
+    "tags": ["Käse", "Cremig", "Klassiker"],
+    "image": "img/kaesekuchen.png",
+    "ingredients": "500g Quark, 150g Zucker, 3 Eier, Vanillepuddingpulver, Mürbeteigboden",
+    "instructions": "Käsemasse glatt rühren, auf den Boden geben und bei 160°C etwa 55 Minuten backen. Im Ofen auskühlen lassen."
+  },
+  {
+    "title": "Schwarzwälder Kirschtorte",
+    "category": "Torte",
+    "tags": ["Kirsche", "Schokolade", "Klassiker"],
+    "image": "img/schwarzwaelder.png",
+    "ingredients": "Schokobiskuit, Sahne, Kirschen, Kirschsaft",
+    "instructions": "Böden backen und tränken. Sahne aufschlagen. Böden abwechselnd mit Sahne und Kirschen schichten und kühlen."
+  },
+  {
+    "title": "Vanille-Sahne-Torte",
+    "category": "Torte",
+    "tags": ["Vanille", "Cremig"],
+    "image": "img/vanilletorte.png",
+    "ingredients": "Biskuit, Sahne, Vanillezucker",
+    "instructions": "Biskuitboden vorbereiten. Sahne mit Vanillezucker steif schlagen. Schichten und mindestens 2 Stunden kühlen."
+  },
+  {
+    "title": "Schoko-Karamell-Torte",
+    "category": "Torte",
+    "tags": ["Schokolade", "Karamell"],
+    "image": "img/schokokaramell.png",
+    "ingredients": "Schokobiskuit, Sahne, Karamellsauce",
+    "instructions": "Böden backen. Sahne aufschlagen und mit Karamell schichten. Torte gut durchkühlen lassen."
+  }
+]
