@@ -79,8 +79,7 @@
     "ingredients": "Schokobiskuit, Sahne, Kakao",
     "instructions": "Biskuitböden backen. Sahne steif schlagen. Böden mit Sahne füllen und mit Kakao bestreuen."
   }
-]
-[
+,
   {
     "title": "Zitronenkuchen",
     "category": "Kuchen",
@@ -161,8 +160,7 @@
     "ingredients": "Schokobiskuit, Sahne, Karamellsauce",
     "instructions": "Böden backen. Sahne aufschlagen und mit Karamell schichten. Torte gut durchkühlen lassen."
   }
-]
-[
+,
   {
     "title": "Mohnkuchen",
     "category": "Kuchen",
@@ -283,8 +281,7 @@
     "ingredients": "Schokobiskuit, Sahne, Bananen",
     "instructions": "Biskuitboden backen. Sahne schlagen, Bananen schneiden und alles schichten. Kühlen."
   }
-]
-[
+,
   {
     "title": "Butterkuchen vom Blech",
     "category": "Kuchen",
@@ -405,8 +402,7 @@
     "ingredients": "Schokokuchen, Schokoladenglasur",
     "instructions": "Kuchen backen und auskühlen lassen. Glasur schmelzen, auftragen und fest werden lassen."
   }
-]
-[
+,
   {
     "title": "Schokokuchen mit Kirschen",
     "category": "Kuchen",
