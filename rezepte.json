@@ -162,3 +162,126 @@
     "instructions": "Böden backen. Sahne aufschlagen und mit Karamell schichten. Torte gut durchkühlen lassen."
   }
 ]
+[
+  {
+    "title": "Mohnkuchen",
+    "category": "Kuchen",
+    "tags": ["Mohn", "Saftig"],
+    "image": "img/mohnkuchen.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 250g Mehl, 150g gemahlener Mohn, 1 TL Backpulver",
+    "instructions": "Butter und Zucker cremig rühren. Eier unterrühren. Mehl, Backpulver und Mohn unterheben. Teig in Form füllen und bei 175°C ca. 50 Minuten backen."
+  },
+  {
+    "title": "Karottenkuchen",
+    "category": "Kuchen",
+    "tags": ["Karotte", "Nussig"],
+    "image": "img/karottenkuchen.png",
+    "ingredients": "300g Karotten, 200g Zucker, 4 Eier, 250g Mehl, 100g gemahlene Nüsse",
+    "instructions": "Eier und Zucker schaumig schlagen. Geriebene Karotten und Nüsse unterheben. Mehl einarbeiten und bei 175°C etwa 45 Minuten backen."
+  },
+  {
+    "title": "Schoko-Brownie-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Saftig"],
+    "image": "img/browniekuchen.png",
+    "ingredients": "200g Schokolade, 180g Butter, 200g Zucker, 3 Eier, 120g Mehl",
+    "instructions": "Schokolade und Butter schmelzen. Zucker und Eier unterrühren. Mehl einarbeiten und bei 170°C ca. 35 Minuten backen."
+  },
+  {
+    "title": "Pfirsichkuchen",
+    "category": "Kuchen",
+    "tags": ["Pfirsich", "Fruchtig"],
+    "image": "img/pfirsichkuchen.png",
+    "ingredients": "300g Mehl, 180g Zucker, 3 Eier, 1 Dose Pfirsiche, Backpulver",
+    "instructions": "Rührteig zubereiten. Abgetropfte Pfirsiche unterheben oder auflegen und bei 175°C etwa 45 Minuten backen."
+  },
+  {
+    "title": "Streuselkuchen",
+    "category": "Kuchen",
+    "tags": ["Streusel", "Klassiker"],
+    "image": "img/streuselkuchen.png",
+    "ingredients": "Hefeteig oder Rührteig, Butter, Zucker, Mehl für Streusel",
+    "instructions": "Teig vorbereiten. Streusel aus Butter, Zucker und Mehl kneten und auf dem Teig verteilen. Bei 180°C ca. 40 Minuten backen."
+  },
+  {
+    "title": "Zebra-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Vanille"],
+    "image": "img/zebrakuchen.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Kakao",
+    "instructions": "Rührteig zubereiten und teilen. Eine Hälfte mit Kakao mischen. Abwechselnd in die Form füllen und bei 175°C etwa 50 Minuten backen."
+  },
+  {
+    "title": "Käsekuchen ohne Boden",
+    "category": "Torte",
+    "tags": ["Käse", "Leicht"],
+    "image": "img/kaesekuchen-ohne.png",
+    "ingredients": "500g Quark, 150g Zucker, 3 Eier, Vanillepuddingpulver",
+    "instructions": "Alle Zutaten glattrühren, in gefettete Form füllen und bei 160°C ca. 55 Minuten backen. Langsam abkühlen lassen."
+  },
+  {
+    "title": "Nougat-Torte",
+    "category": "Torte",
+    "tags": ["Nougat", "Schokolade"],
+    "image": "img/nougat.png",
+    "ingredients": "Biskuit, Sahne, Nougatcreme",
+    "instructions": "Biskuitboden vorbereiten. Sahne steif schlagen und mit Nougat mischen. Böden füllen und kalt stellen."
+  },
+  {
+    "title": "Himbeer-Sahne-Torte",
+    "category": "Torte",
+    "tags": ["Himbeere", "Fruchtig"],
+    "image": "img/himbeersahne.png",
+    "ingredients": "Biskuit, Sahne, Himbeeren",
+    "instructions": "Biskuitboden backen. Sahne schlagen. Himbeeren unterheben und die Böden damit schichten."
+  },
+  {
+    "title": "Karamell-Walnuss-Torte",
+    "category": "Torte",
+    "tags": ["Karamell", "Nussig"],
+    "image": "img/karamellwalnuss.png",
+    "ingredients": "Biskuit, Sahne, Walnüsse, Karamellsauce",
+    "instructions": "Biskuit vorbereiten. Sahne schlagen und mit Nüssen und Karamell schichten. Gut kühlen."
+  },
+  {
+    "title": "Zitronen-Baiser-Torte",
+    "category": "Torte",
+    "tags": ["Zitrone", "Baiser"],
+    "image": "img/zitronenbaiser.png",
+    "ingredients": "Mürbeteig, Zitronencreme, Eiweiß, Zucker",
+    "instructions": "Boden vorbacken. Zitronencreme einfüllen, Baiser aufstreichen und kurz überbacken."
+  },
+  {
+    "title": "Schokoladen-Trüffel-Torte",
+    "category": "Torte",
+    "tags": ["Schokolade", "Festlich"],
+    "image": "img/trueffel.png",
+    "ingredients": "Schokobiskuit, Sahne, Zartbitterschokolade",
+    "instructions": "Böden backen. Sahne mit geschmolzener Schokolade mischen, schichten und gut kühlen."
+  },
+  {
+    "title": "Eierlikörkuchen",
+    "category": "Kuchen",
+    "tags": ["Eierlikör", "Saftig"],
+    "image": "img/eierlikoer.png",
+    "ingredients": "200g Butter, 180g Zucker, 4 Eier, 250g Mehl, 150ml Eierlikör",
+    "instructions": "Butter und Zucker cremig rühren. Eier unterrühren. Mehl und Eierlikör einarbeiten und bei 175°C ca. 50 Minuten backen."
+  },
+  {
+    "title": "Joghurtkuchen",
+    "category": "Kuchen",
+    "tags": ["Joghurt", "Locker"],
+    "image": "img/joghurtkuchen.png",
+    "ingredients": "1 Becher Joghurt, 200g Zucker, 3 Eier, 300g Mehl, Öl",
+    "instructions": "Alle Zutaten verrühren, in Form füllen und bei 175°C etwa 45 Minuten backen."
+  },
+  {
+    "title": "Schoko-Bananen-Torte",
+    "category": "Torte",
+    "tags": ["Schokolade", "Banane"],
+    "image": "img/schokobanane.png",
+    "ingredients": "Schokobiskuit, Sahne, Bananen",
+    "instructions": "Biskuitboden backen. Sahne schlagen, Bananen schneiden und alles schichten. Kühlen."
+  }
+]
+
