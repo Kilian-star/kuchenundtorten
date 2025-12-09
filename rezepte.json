@@ -284,4 +284,125 @@
     "instructions": "Biskuitboden backen. Sahne schlagen, Bananen schneiden und alles schichten. Kühlen."
   }
 ]
-
+[
+  {
+    "title": "Butterkuchen vom Blech",
+    "category": "Kuchen",
+    "tags": ["Butter", "Blechkuchen", "Klassiker"],
+    "image": "img/butterkuchen.png",
+    "ingredients": "500g Mehl, 250ml Milch, 80g Zucker, 80g Butter, Hefe, Mandeln",
+    "instructions": "Hefeteig zubereiten und auf ein Blech streichen. Butterflöckchen und Zucker verteilen und mit Mandeln bestreuen. Bei 180°C ca. 25 Minuten backen."
+  },
+  {
+    "title": "Heidelbeerkuchen",
+    "category": "Kuchen",
+    "tags": ["Beeren", "Fruchtig"],
+    "image": "img/heidelbeerkuchen.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 200g Heidelbeeren",
+    "instructions": "Rührteig anrühren. Heidelbeeren vorsichtig unterheben. In Form füllen und bei 175°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Birnen-Schokoladenkuchen",
+    "category": "Kuchen",
+    "tags": ["Birne", "Schokolade"],
+    "image": "img/birnenschoko.png",
+    "ingredients": "250g Butter, 180g Zucker, 4 Eier, 280g Mehl, Birnen, Schokolade",
+    "instructions": "Teig zubereiten. Birnenstücke und Schokostücke unterheben. Bei 175°C ca. 50 Minuten backen."
+  },
+  {
+    "title": "Mandelkuchen",
+    "category": "Kuchen",
+    "tags": ["Mandel", "Fein"],
+    "image": "img/mandelkuchen.png",
+    "ingredients": "200g Butter, 180g Zucker, 4 Eier, 250g gemahlene Mandeln",
+    "instructions": "Butter und Zucker cremig rühren. Eier und Mandeln unterheben. Bei 170°C etwa 45 Minuten backen."
+  },
+  {
+    "title": "Käsekuchen mit Mandarinen",
+    "category": "Torte",
+    "tags": ["Käse", "Mandarine", "Fruchtig"],
+    "image": "img/mandarinenkaese.png",
+    "ingredients": "Quark, Zucker, Eier, Mandarinen, Mürbeteigboden",
+    "instructions": "Quarkmasse rühren. Mandarinen unterheben, auf Boden geben und bei 160°C ca. 55 Minuten backen."
+  },
+  {
+    "title": "Schoko-Zucchini-Kuchen",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Saftig"],
+    "image": "img/zucchinischoko.png",
+    "ingredients": "250g Zucchini, 200g Zucker, 4 Eier, 250g Mehl, Kakao",
+    "instructions": "Zucchini fein raspeln. Mit den restlichen Zutaten verrühren und bei 175°C etwa 45 Minuten backen."
+  },
+  {
+    "title": "Vanille-Rührkuchen",
+    "category": "Kuchen",
+    "tags": ["Vanille", "Einfach"],
+    "image": "img/vanilleruehr.png",
+    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Vanillezucker",
+    "instructions": "Butter und Zucker cremig schlagen. Eier unterrühren. Mehl unterheben und bei 175°C ca. 50 Minuten backen."
+  },
+  {
+    "title": "Himbeer-Käsekuchen",
+    "category": "Torte",
+    "tags": ["Himbeere", "Käse"],
+    "image": "img/himbeerkaese.png",
+    "ingredients": "Quark, Zucker, Eier, Himbeeren, Mürbeteigboden",
+    "instructions": "Käsemasse rühren. Himbeeren vorsichtig unterheben, auf Boden geben und bei 160°C ca. 55 Minuten backen."
+  },
+  {
+    "title": "Karamell-Apfel-Torte",
+    "category": "Torte",
+    "tags": ["Apfel", "Karamell"],
+    "image": "img/apfelkaramell.png",
+    "ingredients": "Biskuit, Sahne, Äpfel, Karamell",
+    "instructions": "Biskuitboden backen. Sahne schlagen, Äpfel karamellisieren und alles schichten. Gut kühlen."
+  },
+  {
+    "title": "Schokokuchen ohne Mehl",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Glutenfrei"],
+    "image": "img/schokomehlfrei.png",
+    "ingredients": "200g Schokolade, 150g Butter, 150g Zucker, 4 Eier",
+    "instructions": "Schokolade und Butter schmelzen. Eier und Zucker einrühren. In Form füllen und bei 170°C ca. 35 Minuten backen."
+  },
+  {
+    "title": "Haselnusskuchen",
+    "category": "Kuchen",
+    "tags": ["Nussig", "Klassiker"],
+    "image": "img/haselnusskuchen.png",
+    "ingredients": "250g gemahlene Haselnüsse, 180g Zucker, 4 Eier",
+    "instructions": "Eier und Zucker schaumig schlagen. Nüsse unterheben und bei 175°C ca. 40 Minuten backen."
+  },
+  {
+    "title": "Marzipankuchen",
+    "category": "Kuchen",
+    "tags": ["Marzipan", "Fein"],
+    "image": "img/marzipankuchen.png",
+    "ingredients": "200g Marzipan, 150g Butter, 150g Zucker, 3 Eier",
+    "instructions": "Marzipan raspeln und mit Butter und Zucker verrühren. Eier unterheben und bei 170°C ca. 45 Minuten backen."
+  },
+  {
+    "title": "Schoko-Orangen-Torte",
+    "category": "Torte",
+    "tags": ["Schokolade", "Orange"],
+    "image": "img/schokoorange.png",
+    "ingredients": "Schokobiskuit, Sahne, Orangencreme",
+    "instructions": "Böden backen. Sahne aufschlagen und mit Orangencreme schichten. Kühl stellen."
+  },
+  {
+    "title": "Vanille-Kirsch-Torte",
+    "category": "Torte",
+    "tags": ["Vanille", "Kirsche"],
+    "image": "img/vanillekirsche.png",
+    "ingredients": "Biskuit, Sahne, Kirschen",
+    "instructions": "Biskuitboden backen. Sahne schlagen. Mit Kirschen schichten und kalt stellen."
+  },
+  {
+    "title": "Schokokuchen mit Glasur",
+    "category": "Kuchen",
+    "tags": ["Schokolade", "Glasur"],
+    "image": "img/schokoglasur.png",
+    "ingredients": "Schokokuchen, Schokoladenglasur",
+    "instructions": "Kuchen backen und auskühlen lassen. Glasur schmelzen, auftragen und fest werden lassen."
+  }
+]
