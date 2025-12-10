@@ -4,563 +4,79 @@
     "category": "Kuchen",
     "tags": ["Nussig", "Saftig"],
     "image": "img/nusskuchen.png",
-    "ingredients": "250g gemahlene Haselnüsse, 200g Zucker, 4 Eier, 100g Mehl, 1 TL Backpulver",
-    "instructions": "Backofen auf 175°C vorheizen. Eier und Zucker schaumig schlagen. Nüsse, Mehl und Backpulver unterheben. Teig in Form füllen und ca. 45 Minuten backen."
-  },
-  {
-    "title": "Rührkuchen Klassisch",
-    "category": "Kuchen",
-    "tags": ["Einfach", "Schnell"],
-    "image": "img/ruehrkuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 1 Päckchen Backpulver",
-    "instructions": "Butter und Zucker cremig rühren. Eier einzeln unterrühren. Mehl und Backpulver untermischen. In Form füllen und ca. 50 Minuten bei 175°C backen."
-  },
-  {
-    "title": "Orangenkuchen",
-    "category": "Kuchen",
-    "tags": ["Fruchtig", "Orange"],
-    "image": "img/orangenkuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Saft und Schale von 2 Orangen",
-    "instructions": "Backofen auf 175°C vorheizen. Butter, Zucker und Eier verrühren. Mehl sowie Orangensaft und Schale unterheben. Ca. 50 Minuten backen."
-  },
-  {
-    "title": "Schoko-Nuss-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Nussig"],
-    "image": "img/schokonuss.png",
-    "ingredients": "200g Schokolade, 200g Butter, 180g Zucker, 4 Eier, 200g gemahlene Nüsse",
-    "instructions": "Schokolade schmelzen. Butter und Zucker verrühren. Eier unterheben. Schokolade und Nüsse einrühren und bei 170°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Kokoskuchen",
-    "category": "Kuchen",
-    "tags": ["Kokos", "Sommer"],
-    "image": "img/kokoskuchen.png",
-    "ingredients": "250g Mehl, 200g Zucker, 4 Eier, 100g Kokosraspeln, 200ml Kokosmilch",
-    "instructions": "Eier und Zucker verrühren. Mehl, Kokosraspeln und Kokosmilch unterheben. Teig in Form füllen und ca. 45 Minuten backen."
-  },
-  {
-    "title": "Pflaumenkuchen",
-    "category": "Kuchen",
-    "tags": ["Pflaumen", "Fruchtig"],
-    "image": "img/pflaumenkuchen.png",
-    "ingredients": "Hefeteig oder Rührteig, Pflaumen, Zucker, Zimt",
-    "instructions": "Teig in Form geben. Pflaumen darauf verteilen. Mit Zucker und Zimt bestreuen und ca. 40 Minuten bei 180°C backen."
-  },
-  {
-    "title": "Schokoladenkuchen Deluxe",
-    "category": "Kuchen",
-    "tags": ["Schoko", "Saftig"],
-    "image": "img/schokodeluxe.png",
-    "ingredients": "250g Schokolade, 250g Butter, 200g Zucker, 4 Eier, 200g Mehl",
-    "instructions": "Schokolade schmelzen. Butter und Zucker cremig schlagen. Eier einarbeiten. Schokolade und Mehl unterheben und 40 Minuten bei 170°C backen."
-  },
-  {
-    "title": "Mandarinen-Schmand-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Fruchtig", "Cremig"],
-    "image": "img/mandarine.png",
-    "ingredients": "300g Mehl, 150g Zucker, 3 Eier, 2 Becher Schmand, 1 Dose Mandarinen",
-    "instructions": "Teig anrühren. Mandarinen unterheben. In Form füllen und bei 175°C etwa 45 Minuten backen."
-  },
-  {
-    "title": "Erdbeer-Sahne-Torte",
-    "category": "Torte",
-    "tags": ["Erdbeere", "Frisch"],
-    "image": "img/erdbeertorte.png",
-    "ingredients": "Biskuit, Sahne, Erdbeeren, Zucker",
-    "instructions": "Biskuitboden vorbereiten. Sahne steif schlagen. Erdbeeren schneiden. Alles schichten und kalt stellen."
+    "ingredients": "Boden: 250 g gemahlene Haselnüsse, 200 g Zucker, 4 Eier (Gr. M), 100 g Mehl, 1 TL Backpulver, 1 Prise Salz; Optional: 1 Päckchen Vanillezucker; Fett für die Form (Butter oder Margarine)",
+    "instructions": "1) Backofen auf 175 °C Ober-/Unterhitze vorheizen. Eine Gugelhupf- oder Kastenform gut fetten und ggf. mit Mehl ausstäuben. 2) Eier, Zucker und Vanillezucker in eine Rührschüssel geben und mit dem Handmixer oder der Küchenmaschine ca. 5–7 Minuten sehr schaumig schlagen, bis die Masse hell und luftig ist. 3) Die gemahlenen Haselnüsse in eine Schüssel sieben (große Stücke entfernen). 4) Mehl, Backpulver und eine Prise Salz mischen. 5) Abwechselnd die Nuss-Mehl-Mischung und 2–3 Esslöffel neutrales Öl oder Milch kurz unter die Eimasse heben (nicht zu lange rühren, damit der Teig luftig bleibt). 6) Den Teig in die vorbereitete Form füllen, Oberfläche glatt streichen. 7) Im vorgeheizten Ofen ca. 40–50 Minuten backen. Nach 35 Minuten Stäbchenprobe machen; bleibt kein Teig mehr am Stäbchen, ist der Kuchen fertig. 8) Kuchen aus dem Ofen nehmen, 10 Minuten in der Form ruhen lassen, dann vorsichtig stürzen und auf einem Kuchengitter vollständig abkühlen lassen. 9) Optional mit Puderzucker bestreuen oder eine einfache Glasur (Puderzucker + Zitronensaft) auftragen."
   },
   {
     "title": "Schoko-Sahne-Torte",
     "category": "Torte",
-    "tags": ["Schokolade", "Cremig"],
-    "image": "img/schokosahne.png",
-    "ingredients": "Schokobiskuit, Sahne, Kakao",
-    "instructions": "Biskuitböden backen. Sahne steif schlagen. Böden mit Sahne füllen und mit Kakao bestreuen."
-  }
-,
-  {
-    "title": "Zitronenkuchen",
-    "category": "Kuchen",
-    "tags": ["Zitrone", "Frisch", "Klassiker"],
-    "image": "img/zitronenkuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 1 Päckchen Backpulver, Saft und Schale von 2 Zitronen",
-    "instructions": "Butter und Zucker cremig rühren. Eier einzeln unterrühren. Mehl und Backpulver mischen und zusammen mit Zitronensaft und -schale unterheben. Teig in eine gefettete Form füllen und bei 175°C ca. 50 Minuten backen."
+    "tags": ["Schokolade", "Sahne", "Feier"],
+    "image": "img/schoko_sahne_torte.png",
+    "ingredients": "Boden: 4 Eier, 150 g Zucker, 120 g Mehl, 40 g Speisestärke, 30 g Backkakao, 1 TL Backpulver, 1 Prise Salz; Füllung: 600 ml Schlagsahne, 3 Päckchen Sahnesteif, 3 EL Zucker, 2 EL Kakaopulver (optional für Schokofüllung); Zwischenlage: 200 g Kirschkonfitüre (optional, ohne Alkohol); Deko: Schokoraspel, Kakaopulver, ganze Kirschen oder Schokostücke",
+    "instructions": "1) Ofen auf 170 °C Ober-/Unterhitze vorheizen. 2) Springform (26 cm) fetten und am Boden mit Backpapier auslegen. 3) Eier mit Zucker und einer Prise Salz in einer großen Schüssel 6–8 Minuten sehr cremig und hell schlagen, bis das Volumen deutlich zugenommen hat. 4) Mehl, Speisestärke, Backkakao und Backpulver mischen, durch ein Sieb zum Eierschaum geben und mit einem Teigspatel vorsichtig unterheben — immer von unten nach oben falten, damit die Luftigkeit erhalten bleibt. 5) Den Teig in die Springform füllen, glatt streichen und 25–30 Minuten backen. 6) Boden vollständig auskühlen lassen, dann zweimal waagerecht durchschneiden, sodass drei Böden entstehen. 7) Sahne mit Zucker und Sahnesteif steif schlagen. Wenn du eine Schokofüllung willst, 2 EL Kakaopulver unterheben. 8) Auf den ersten Boden dünn Konfitüre streichen (wenn verwendet), darauf eine dicke Schicht Sahne verteilen. Zweiten Boden aufsetzen, wieder Sahne, dann dritten Boden auflegen. Torte außen mit Sahne einstreichen. 9) Mit Schokoraspeln bestreuen und eventuell mit Kirschen dekorieren. Vor dem Servieren mindestens 1–2 Stunden kühl stellen, damit die Sahne fest wird."
   },
   {
-    "title": "Marmorkuchen Klassisch",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Vanille", "Klassiker"],
-    "image": "img/marmorkuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 30g Kakao, Milch",
-    "instructions": "Butter und Zucker cremig schlagen. Eier unterrühren. Mehl einarbeiten. Teig teilen, eine Hälfte mit Kakao und Milch verrühren, marmorieren und bei 175°C etwa 50 Minuten backen."
-  },
-  {
-    "title": "Apfel-Zimtkuchen",
-    "category": "Kuchen",
-    "tags": ["Apfel", "Zimt", "Herbst"],
-    "image": "img/apfelzimt.png",
-    "ingredients": "300g Mehl, 200g Zucker, 3 Eier, 150ml Öl, 3 Äpfel, Zimt",
-    "instructions": "Eier und Zucker schaumig schlagen. Öl und Mehl unterrühren. Äpfel würfeln, mit Zimt mischen und unterheben. Bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Schmandkuchen",
-    "category": "Kuchen",
-    "tags": ["Cremig", "Blechkuchen"],
-    "image": "img/schmandkuchen.png",
-    "ingredients": "300g Mehl, 150g Zucker, 2 Eier, 2 Becher Schmand, Vanillezucker",
-    "instructions": "Teig anrühren, Schmand unterheben und glatt streichen. Bei 180°C etwa 40 Minuten backen und auskühlen lassen."
-  },
-  {
-    "title": "Kirschkuchen",
-    "category": "Kuchen",
-    "tags": ["Kirsche", "Saftig"],
-    "image": "img/kirschkuchen.png",
-    "ingredients": "250g Butter, 180g Zucker, 4 Eier, 300g Mehl, 1 Glas Kirschen",
-    "instructions": "Rührteig zubereiten. Abgetropfte Kirschen unterheben oder auflegen. Bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Bananenkuchen",
-    "category": "Kuchen",
-    "tags": ["Banane", "Saftig"],
-    "image": "img/bananenkuchen.png",
-    "ingredients": "3 reife Bananen, 200g Zucker, 2 Eier, 250g Mehl, 1 TL Natron",
-    "instructions": "Bananen zerdrücken. Mit Zucker und Eiern verrühren. Mehl und Natron unterheben und bei 170°C ca. 50 Minuten backen."
-  },
-  {
-    "title": "Käsekuchen mit Boden",
+    "title": "Käsekuchen (mit Keksboden)",
     "category": "Torte",
-    "tags": ["Käse", "Cremig", "Klassiker"],
+    "tags": ["Cremig", "Klassiker"],
     "image": "img/kaesekuchen.png",
-    "ingredients": "500g Quark, 150g Zucker, 3 Eier, Vanillepuddingpulver, Mürbeteigboden",
-    "instructions": "Käsemasse glatt rühren, auf den Boden geben und bei 160°C etwa 55 Minuten backen. Im Ofen auskühlen lassen."
+    "ingredients": "Boden: 200 g Butterkekse, 100 g Butter (geschmolzen); Füllung: 900 g Magerquark, 200 g Schmand oder Saure Sahne, 200 g Zucker, 4 Eier, 1 Päckchen Vanillepuddingpulver (zum Kochen), Abrieb einer Zitrone, 1 Päckchen Vanillezucker; Optional: Fruchtspiegel oder Puderzucker zum Servieren",
+    "instructions": "1) Backofen auf 160 °C Ober-/Unterhitze vorheizen. Springform (26–28 cm) fetten. 2) Kekse in einem Mixer fein mahlen oder in einem Gefrierbeutel mit dem Nudelholz zerkleinern. Mit geschmolzener Butter vermischen, in die Form drücken und einen festen Boden formen. Boden für 10 Minuten kalt stellen. 3) Quark, Schmand, Zucker, Vanillezucker und Zitronenabrieb in eine große Schüssel geben und glatt rühren. Eier einzeln unterrühren. Zum Schluss das Vanillepuddingpulver einrieseln lassen und kurz unterrühren, bis eine homogene Masse entsteht. 4) Die Quarkmasse auf den Keksboden geben, Oberfläche glatt streichen. 5) Im vorgeheizten Ofen ca. 60 Minuten backen. Wenn die Oberfläche zu schnell bräunt, mit Alufolie abdecken. 6) Nach dem Backen die Tür 10–15 Minuten öffnen und den Kuchen im ausgeschalteten Ofen langsam abkühlen lassen (das verhindert Risse). Anschließend komplett auf Raumtemperatur abkühlen lassen und dann mehrere Stunden, idealerweise über Nacht, kalt stellen. 7) Vor dem Servieren mit Puderzucker bestäuben oder mit frischem Obst servieren."
   },
   {
-    "title": "Schwarzwälder Kirschtorte",
+    "title": "Erdbeer-Sahne-Torte",
     "category": "Torte",
-    "tags": ["Kirsche", "Schokolade", "Klassiker"],
-    "image": "img/schwarzwaelder.png",
-    "ingredients": "Schokobiskuit, Sahne, Kirschen, Kirschsaft",
-    "instructions": "Böden backen und tränken. Sahne aufschlagen. Böden abwechselnd mit Sahne und Kirschen schichten und kühlen."
+    "tags": ["Fruchtig", "Sommer"],
+    "image": "img/erdbeer_sahne_torte.png",
+    "ingredients": "Boden: 4 Eier, 120 g Zucker, 120 g Mehl, 30 g Speisestärke, 1 TL Backpulver; Füllung: 600 ml Schlagsahne, 3 Päckchen Sahnesteif, 3 EL Zucker; Belag: 600 g frische Erdbeeren; Optional: 1–2 EL Erdbeerkonfitüre zum Glänzen",
+    "instructions": "1) Biskuitboden: Ofen auf 170 °C vorheizen. Eier und Zucker 6–8 Minuten cremig schlagen, bis die Masse sehr hell ist. Mehl, Speisestärke und Backpulver mischen, sieben und mit einem Spatel unter die Eimasse heben. In eine Springform (26 cm) geben und 20–25 Minuten backen. 2) Boden vollständig auskühlen lassen, dann waagerecht in zwei Hälften schneiden. 3) Erdbeeren waschen, Putzen und je nach Größe halbieren oder vierteln. Einige schöne für die Dekoration beiseitelegen. 4) Sahne mit Zucker und Sahnesteif steif schlagen. 5) Auf den unteren Boden eine Schicht Sahne verteilen, einige Erdbeeren darauf verteilen, dann zweiten Boden auflegen. Die Torte rundherum mit Sahne einstreichen. 6) Mit den restlichen Erdbeeren dekorieren. Für extra Glanz etwas erwärmte Erdbeerkonfitüre durch ein Sieb streichen und dünn über die Früchte pinseln. Vor dem Servieren mind. 1 Stunde kühlen."
   },
   {
-    "title": "Vanille-Sahne-Torte",
+    "title": "Marmorkuchen",
+    "category": "Kuchen",
+    "tags": ["Klassisch", "Schoko-Vanille"],
+    "image": "img/marmorkuchen.png",
+    "ingredients": "Boden: 250 g weiche Butter, 200 g Zucker, 4 Eier, 1 Päckchen Vanillezucker, 300 g Mehl, 1 Päckchen Backpulver, 4 EL Milch; Schokoanteil: 2 EL Backkakao, 1–2 EL Milch extra; Optional: Puderzucker zum Bestäuben",
+    "instructions": "1) Backofen auf 175 °C Ober-/Unterhitze vorheizen. Kastenform fetten und mehlen. 2) Butter, Zucker und Vanillezucker cremig rühren. Eier einzeln dazugeben und jeweils gut unterrühren. 3) Mehl mit Backpulver mischen und abwechselnd mit der Milch unter die Butter-Ei-Mischung rühren, bis ein glatter Rührteig entsteht. 4) Ca. zwei Drittel des Teigs in die Kastenform füllen. In den verbleibenden Teig das Kakaopulver und evtl. 1–2 EL Milch einrühren, bis er geschmeidig ist. 5) Den dunklen Teig Löffelweise auf den hellen Teig geben und mit einer Gabel oder einem Messer spiralförmig durchziehen, damit das Marmor-Muster entsteht. 6) Im Ofen 50–60 Minuten backen; Stäbchenprobe durchführen. 7) Kuchen aus der Form stürzen, auf einem Gitter abkühlen lassen und vor dem Servieren mit Puderzucker bestäuben."
+  },
+  {
+    "title": "Zitronenkuchen (saftig)",
+    "category": "Kuchen",
+    "tags": ["Frisch", "Zitrus"],
+    "image": "img/zitronenkuchen.png",
+    "ingredients": "Boden: 3 Eier, 200 g Zucker, 200 ml neutrales Öl (z. B. Raps), 200 g Joghurt oder Buttermilch, 300 g Mehl, 1 Päckchen Backpulver, Abrieb einer unbehandelten Zitrone; Glasur: Saft von 2 Zitronen, 150 g Puderzucker",
+    "instructions": "1) Ofen auf 180 °C vorheizen. Kastenform fetten oder Springform (26 cm) vorbereiten. 2) Eier mit Zucker schaumig schlagen. Öl und Joghurt dazugeben und kurz mixen. 3) Mehl, Backpulver und Zitronenabrieb mischen und unter die feuchte Masse rühren, bis ein homogener Teig entsteht. 4) In die Form füllen und ca. 40–50 Minuten backen (je nach Form). Stäbchenprobe machen. 5) Kuchen aus dem Ofen nehmen und kurz abkühlen lassen. Für die Glasur Zitronensaft mit Puderzucker glatt rühren. Noch warmen Kuchen mit der Glasur beträufeln, sodass sie leicht einsickert und der Kuchen extra saftig wird. Komplett abkühlen lassen."
+  },
+  {
+    "title": "Schwarzwälder Kirschtorte (klassisch)",
     "category": "Torte",
-    "tags": ["Vanille", "Cremig"],
-    "image": "img/vanilletorte.png",
-    "ingredients": "Biskuit, Sahne, Vanillezucker",
-    "instructions": "Biskuitboden vorbereiten. Sahne mit Vanillezucker steif schlagen. Schichten und mindestens 2 Stunden kühlen."
+    "tags": ["Klassiker", "Kirsch", "Schokolade"],
+    "image": "img/schwarzwaelder_kirschtorte.png",
+    "ingredients": "Boden: Schokobiskuit aus 4 Eiern, 120 g Zucker, 90 g Mehl, 30 g Kakao, 1 TL Backpulver; Füllung: 600 ml Sahne, 3 Päckchen Sahnesteif, 3 EL Zucker; Kirschen: 1 Glas Sauerkirschen (abgetropft) oder 500 g frische Kirschen, 1–2 EL Zucker; Optional: 2–3 EL Kirschwasser (für Erwachsende); Deko: Schokoraspel, ganze Kirschen",
+    "instructions": "1) Schokobiskuit: Ofen auf 170 °C vorheizen. Eier und Zucker 6–8 Minuten cremig schlagen. Mehl, Kakao und Backpulver mischen, sieben und vorsichtig unterheben. In eine Springform (26 cm) geben und 25–30 Minuten backen. 2) Biskuit vollständig auskühlen lassen und in drei gleich dicke Böden schneiden. 3) Kirschen abtropfen lassen; Saft auffangen und mit Zucker abschmecken. Wer mag, mischt 1–2 EL Kirschwasser in den Saft und beträufelt die Böden leicht damit. 4) Sahne mit Zucker und Sahnesteif steif schlagen. 5) Auf den ersten Boden Sahne verteilen, einige Kirschen darauf geben. Zweiten Boden auflegen, ebenfalls mit Sahne bestreichen und Kirschen verteilen. Dritten Boden aufsetzen und die gesamte Torte mit Sahne einstreichen. 6) Seiten mit Schokoraspeln bestreuen und mit ganzen Kirschen dekorieren. Vor dem Servieren mindestens 2 Stunden kühlen, damit die Sahne durchkühlt und die Aromen sich setzen."
   },
   {
-    "title": "Schoko-Karamell-Torte",
+    "title": "Apfelkuchen (Rührteig mit Apfeldecke)",
+    "category": "Kuchen",
+    "tags": ["Apfel", "Herbst", "Saftig"],
+    "image": "img/apfelkuchen.png",
+    "ingredients": "Boden: 200 g weiche Butter, 180 g Zucker, 3 Eier, 1 Päckchen Vanillezucker, 300 g Mehl, 1 Päckchen Backpulver, 2–3 EL Milch; Belag: 4–5 mittelgroße Äpfel (säuerlich, z. B. Boskop), 2 EL Zitronensaft, 2–3 EL Zucker, 1 TL Zimt; Optional: Streusel aus 100 g Mehl, 70 g Butter, 70 g Zucker",
+    "instructions": "1) Ofen auf 180 °C vorheizen. Springform (26 cm) fetten. 2) Butter, Zucker und Vanillezucker cremig rühren. Eier einzeln unterrühren. Mehl mit Backpulver mischen und zusammen mit der Milch kurz unterrühren, bis ein geschmeidiger Rührteig entsteht. 3) Teig in die Form füllen und glatt streichen. 4) Äpfel schälen, entkernen und in dünne Spalten schneiden. Mit Zitronensaft, Zucker und Zimt mischen. Apfelscheiben dachziegelartig auf dem Teig verteilen. 5) Optional: Streusel zubereiten und über die Äpfel geben. 6) Kuchen ca. 45–55 Minuten backen, bis die Oberfläche goldbraun ist (Stäbchenprobe). 7) Aus dem Ofen nehmen, etwas abkühlen lassen und aus der Form lösen. Lauwarm oder kalt servieren, z. B. mit Vanilleeis oder Schlagsahne."
+  },
+  {
+    "title": "Bananenkuchen (mit Walnüssen)",
+    "category": "Kuchen",
+    "tags": ["Bananig", "Saftig"],
+    "image": "img/bananenkuchen.png",
+    "ingredients": "Boden: 3 reife Bananen (sehr braun für mehr Süße), 150 g Zucker, 2 Eier, 150 g weiche Butter, 200 g Mehl, 1 TL Natron oder 1 Päckchen Backpulver, 1 Prise Salz; Extras: 100 g gehackte Walnüsse, 1 TL Zimt, 1 TL Vanilleextrakt",
+    "instructions": "1) Backofen auf 175 °C Ober-/Unterhitze vorheizen. Kastenform fetten. 2) Bananen in einer Schüssel mit einer Gabel gut zerdrücken. 3) Butter und Zucker cremig rühren, Eier einzeln unterrühren, Vanilleextrakt dazugeben. Zerdrückte Bananen unterrühren. 4) Mehl, Natron/Backpulver, Zimt und Salz mischen und kurz unter die feuchte Masse heben. Zum Schluss Walnüsse unterheben. 5) Teig in die Form füllen und ca. 45–55 Minuten backen. Stäbchenprobe durchführen. 6) Kuchen auskühlen lassen, aus der Form nehmen. Optional mit einer dünnen Zuckerglasur oder Puderzucker bestäuben."
+  },
+  {
+    "title": "Vanille-Sahnetorte (leichte Variante)",
     "category": "Torte",
-    "tags": ["Schokolade", "Karamell"],
-    "image": "img/schokokaramell.png",
-    "ingredients": "Schokobiskuit, Sahne, Karamellsauce",
-    "instructions": "Böden backen. Sahne aufschlagen und mit Karamell schichten. Torte gut durchkühlen lassen."
-  }
-,
-  {
-    "title": "Mohnkuchen",
-    "category": "Kuchen",
-    "tags": ["Mohn", "Saftig"],
-    "image": "img/mohnkuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 250g Mehl, 150g gemahlener Mohn, 1 TL Backpulver",
-    "instructions": "Butter und Zucker cremig rühren. Eier unterrühren. Mehl, Backpulver und Mohn unterheben. Teig in Form füllen und bei 175°C ca. 50 Minuten backen."
-  },
-  {
-    "title": "Karottenkuchen",
-    "category": "Kuchen",
-    "tags": ["Karotte", "Nussig"],
-    "image": "img/karottenkuchen.png",
-    "ingredients": "300g Karotten, 200g Zucker, 4 Eier, 250g Mehl, 100g gemahlene Nüsse",
-    "instructions": "Eier und Zucker schaumig schlagen. Geriebene Karotten und Nüsse unterheben. Mehl einarbeiten und bei 175°C etwa 45 Minuten backen."
-  },
-  {
-    "title": "Schoko-Brownie-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Saftig"],
-    "image": "img/browniekuchen.png",
-    "ingredients": "200g Schokolade, 180g Butter, 200g Zucker, 3 Eier, 120g Mehl",
-    "instructions": "Schokolade und Butter schmelzen. Zucker und Eier unterrühren. Mehl einarbeiten und bei 170°C ca. 35 Minuten backen."
-  },
-  {
-    "title": "Pfirsichkuchen",
-    "category": "Kuchen",
-    "tags": ["Pfirsich", "Fruchtig"],
-    "image": "img/pfirsichkuchen.png",
-    "ingredients": "300g Mehl, 180g Zucker, 3 Eier, 1 Dose Pfirsiche, Backpulver",
-    "instructions": "Rührteig zubereiten. Abgetropfte Pfirsiche unterheben oder auflegen und bei 175°C etwa 45 Minuten backen."
-  },
-  {
-    "title": "Streuselkuchen",
-    "category": "Kuchen",
-    "tags": ["Streusel", "Klassiker"],
-    "image": "img/streuselkuchen.png",
-    "ingredients": "Hefeteig oder Rührteig, Butter, Zucker, Mehl für Streusel",
-    "instructions": "Teig vorbereiten. Streusel aus Butter, Zucker und Mehl kneten und auf dem Teig verteilen. Bei 180°C ca. 40 Minuten backen."
-  },
-  {
-    "title": "Zebra-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Vanille"],
-    "image": "img/zebrakuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Kakao",
-    "instructions": "Rührteig zubereiten und teilen. Eine Hälfte mit Kakao mischen. Abwechselnd in die Form füllen und bei 175°C etwa 50 Minuten backen."
-  },
-  {
-    "title": "Käsekuchen ohne Boden",
-    "category": "Torte",
-    "tags": ["Käse", "Leicht"],
-    "image": "img/kaesekuchen-ohne.png",
-    "ingredients": "500g Quark, 150g Zucker, 3 Eier, Vanillepuddingpulver",
-    "instructions": "Alle Zutaten glattrühren, in gefettete Form füllen und bei 160°C ca. 55 Minuten backen. Langsam abkühlen lassen."
-  },
-  {
-    "title": "Nougat-Torte",
-    "category": "Torte",
-    "tags": ["Nougat", "Schokolade"],
-    "image": "img/nougat.png",
-    "ingredients": "Biskuit, Sahne, Nougatcreme",
-    "instructions": "Biskuitboden vorbereiten. Sahne steif schlagen und mit Nougat mischen. Böden füllen und kalt stellen."
-  },
-  {
-    "title": "Himbeer-Sahne-Torte",
-    "category": "Torte",
-    "tags": ["Himbeere", "Fruchtig"],
-    "image": "img/himbeersahne.png",
-    "ingredients": "Biskuit, Sahne, Himbeeren",
-    "instructions": "Biskuitboden backen. Sahne schlagen. Himbeeren unterheben und die Böden damit schichten."
-  },
-  {
-    "title": "Karamell-Walnuss-Torte",
-    "category": "Torte",
-    "tags": ["Karamell", "Nussig"],
-    "image": "img/karamellwalnuss.png",
-    "ingredients": "Biskuit, Sahne, Walnüsse, Karamellsauce",
-    "instructions": "Biskuit vorbereiten. Sahne schlagen und mit Nüssen und Karamell schichten. Gut kühlen."
-  },
-  {
-    "title": "Zitronen-Baiser-Torte",
-    "category": "Torte",
-    "tags": ["Zitrone", "Baiser"],
-    "image": "img/zitronenbaiser.png",
-    "ingredients": "Mürbeteig, Zitronencreme, Eiweiß, Zucker",
-    "instructions": "Boden vorbacken. Zitronencreme einfüllen, Baiser aufstreichen und kurz überbacken."
-  },
-  {
-    "title": "Schokoladen-Trüffel-Torte",
-    "category": "Torte",
-    "tags": ["Schokolade", "Festlich"],
-    "image": "img/trueffel.png",
-    "ingredients": "Schokobiskuit, Sahne, Zartbitterschokolade",
-    "instructions": "Böden backen. Sahne mit geschmolzener Schokolade mischen, schichten und gut kühlen."
-  },
-  {
-    "title": "Eierlikörkuchen",
-    "category": "Kuchen",
-    "tags": ["Eierlikör", "Saftig"],
-    "image": "img/eierlikoer.png",
-    "ingredients": "200g Butter, 180g Zucker, 4 Eier, 250g Mehl, 150ml Eierlikör",
-    "instructions": "Butter und Zucker cremig rühren. Eier unterrühren. Mehl und Eierlikör einarbeiten und bei 175°C ca. 50 Minuten backen."
-  },
-  {
-    "title": "Joghurtkuchen",
-    "category": "Kuchen",
-    "tags": ["Joghurt", "Locker"],
-    "image": "img/joghurtkuchen.png",
-    "ingredients": "1 Becher Joghurt, 200g Zucker, 3 Eier, 300g Mehl, Öl",
-    "instructions": "Alle Zutaten verrühren, in Form füllen und bei 175°C etwa 45 Minuten backen."
-  },
-  {
-    "title": "Schoko-Bananen-Torte",
-    "category": "Torte",
-    "tags": ["Schokolade", "Banane"],
-    "image": "img/schokobanane.png",
-    "ingredients": "Schokobiskuit, Sahne, Bananen",
-    "instructions": "Biskuitboden backen. Sahne schlagen, Bananen schneiden und alles schichten. Kühlen."
-  }
-,
-  {
-    "title": "Butterkuchen vom Blech",
-    "category": "Kuchen",
-    "tags": ["Butter", "Blechkuchen", "Klassiker"],
-    "image": "img/butterkuchen.png",
-    "ingredients": "500g Mehl, 250ml Milch, 80g Zucker, 80g Butter, Hefe, Mandeln",
-    "instructions": "Hefeteig zubereiten und auf ein Blech streichen. Butterflöckchen und Zucker verteilen und mit Mandeln bestreuen. Bei 180°C ca. 25 Minuten backen."
-  },
-  {
-    "title": "Heidelbeerkuchen",
-    "category": "Kuchen",
-    "tags": ["Beeren", "Fruchtig"],
-    "image": "img/heidelbeerkuchen.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, 200g Heidelbeeren",
-    "instructions": "Rührteig anrühren. Heidelbeeren vorsichtig unterheben. In Form füllen und bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Birnen-Schokoladenkuchen",
-    "category": "Kuchen",
-    "tags": ["Birne", "Schokolade"],
-    "image": "img/birnenschoko.png",
-    "ingredients": "250g Butter, 180g Zucker, 4 Eier, 280g Mehl, Birnen, Schokolade",
-    "instructions": "Teig zubereiten. Birnenstücke und Schokostücke unterheben. Bei 175°C ca. 50 Minuten backen."
-  },
-  {
-    "title": "Mandelkuchen",
-    "category": "Kuchen",
-    "tags": ["Mandel", "Fein"],
-    "image": "img/mandelkuchen.png",
-    "ingredients": "200g Butter, 180g Zucker, 4 Eier, 250g gemahlene Mandeln",
-    "instructions": "Butter und Zucker cremig rühren. Eier und Mandeln unterheben. Bei 170°C etwa 45 Minuten backen."
-  },
-  {
-    "title": "Käsekuchen mit Mandarinen",
-    "category": "Torte",
-    "tags": ["Käse", "Mandarine", "Fruchtig"],
-    "image": "img/mandarinenkaese.png",
-    "ingredients": "Quark, Zucker, Eier, Mandarinen, Mürbeteigboden",
-    "instructions": "Quarkmasse rühren. Mandarinen unterheben, auf Boden geben und bei 160°C ca. 55 Minuten backen."
-  },
-  {
-    "title": "Schoko-Zucchini-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Saftig"],
-    "image": "img/zucchinischoko.png",
-    "ingredients": "250g Zucchini, 200g Zucker, 4 Eier, 250g Mehl, Kakao",
-    "instructions": "Zucchini fein raspeln. Mit den restlichen Zutaten verrühren und bei 175°C etwa 45 Minuten backen."
-  },
-  {
-    "title": "Vanille-Rührkuchen",
-    "category": "Kuchen",
-    "tags": ["Vanille", "Einfach"],
-    "image": "img/vanilleruehr.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Vanillezucker",
-    "instructions": "Butter und Zucker cremig schlagen. Eier unterrühren. Mehl unterheben und bei 175°C ca. 50 Minuten backen."
-  },
-  {
-    "title": "Himbeer-Käsekuchen",
-    "category": "Torte",
-    "tags": ["Himbeere", "Käse"],
-    "image": "img/himbeerkaese.png",
-    "ingredients": "Quark, Zucker, Eier, Himbeeren, Mürbeteigboden",
-    "instructions": "Käsemasse rühren. Himbeeren vorsichtig unterheben, auf Boden geben und bei 160°C ca. 55 Minuten backen."
-  },
-  {
-    "title": "Karamell-Apfel-Torte",
-    "category": "Torte",
-    "tags": ["Apfel", "Karamell"],
-    "image": "img/apfelkaramell.png",
-    "ingredients": "Biskuit, Sahne, Äpfel, Karamell",
-    "instructions": "Biskuitboden backen. Sahne schlagen, Äpfel karamellisieren und alles schichten. Gut kühlen."
-  },
-  {
-    "title": "Schokokuchen ohne Mehl",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Glutenfrei"],
-    "image": "img/schokomehlfrei.png",
-    "ingredients": "200g Schokolade, 150g Butter, 150g Zucker, 4 Eier",
-    "instructions": "Schokolade und Butter schmelzen. Eier und Zucker einrühren. In Form füllen und bei 170°C ca. 35 Minuten backen."
-  },
-  {
-    "title": "Haselnusskuchen",
-    "category": "Kuchen",
-    "tags": ["Nussig", "Klassiker"],
-    "image": "img/haselnusskuchen.png",
-    "ingredients": "250g gemahlene Haselnüsse, 180g Zucker, 4 Eier",
-    "instructions": "Eier und Zucker schaumig schlagen. Nüsse unterheben und bei 175°C ca. 40 Minuten backen."
-  },
-  {
-    "title": "Marzipankuchen",
-    "category": "Kuchen",
-    "tags": ["Marzipan", "Fein"],
-    "image": "img/marzipankuchen.png",
-    "ingredients": "200g Marzipan, 150g Butter, 150g Zucker, 3 Eier",
-    "instructions": "Marzipan raspeln und mit Butter und Zucker verrühren. Eier unterheben und bei 170°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Schoko-Orangen-Torte",
-    "category": "Torte",
-    "tags": ["Schokolade", "Orange"],
-    "image": "img/schokoorange.png",
-    "ingredients": "Schokobiskuit, Sahne, Orangencreme",
-    "instructions": "Böden backen. Sahne aufschlagen und mit Orangencreme schichten. Kühl stellen."
-  },
-  {
-    "title": "Vanille-Kirsch-Torte",
-    "category": "Torte",
-    "tags": ["Vanille", "Kirsche"],
-    "image": "img/vanillekirsche.png",
-    "ingredients": "Biskuit, Sahne, Kirschen",
-    "instructions": "Biskuitboden backen. Sahne schlagen. Mit Kirschen schichten und kalt stellen."
-  },
-  {
-    "title": "Schokokuchen mit Glasur",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Glasur"],
-    "image": "img/schokoglasur.png",
-    "ingredients": "Schokokuchen, Schokoladenglasur",
-    "instructions": "Kuchen backen und auskühlen lassen. Glasur schmelzen, auftragen und fest werden lassen."
-  }
-,
-  {
-    "title": "Schokokuchen mit Kirschen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Kirsche"],
-    "image": "img/schokokirsch.png",
-    "ingredients": "250g Butter, 200g Zucker, 4 Eier, 300g Mehl, Kakao, Kirschen",
-    "instructions": "Rührteig zubereiten. Kirschen unterheben und bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Bienenstich",
-    "category": "Kuchen",
-    "tags": ["Hefe", "Klassiker"],
-    "image": "img/bienenstich.png",
-    "ingredients": "Hefeteig, Vanillecreme, Mandeln, Honig",
-    "instructions": "Hefeteig backen. Mandelkruste aufbringen. Nach dem Abkühlen mit Vanillecreme füllen."
-  },
-  {
-    "title": "Schoko-Cheesecake",
-    "category": "Torte",
-    "tags": ["Schokolade", "Käse"],
-    "image": "img/schokocheese.png",
-    "ingredients": "Quark, Zucker, Eier, Kakao, Keksboden",
-    "instructions": "Käsemasse mit Kakao verrühren, auf Boden geben und bei 160°C ca. 55 Minuten backen."
-  },
-  {
-    "title": "Apfelkuchen vom Blech",
-    "category": "Kuchen",
-    "tags": ["Apfel", "Blechkuchen"],
-    "image": "img/apfelblech.png",
-    "ingredients": "Rührteig, Äpfel, Zucker, Zimt",
-    "instructions": "Teig aufs Blech streichen. Äpfel auflegen und bei 180°C ca. 40 Minuten backen."
-  },
-  {
-    "title": "Schoko-Haselnuss-Torte",
-    "category": "Torte",
-    "tags": ["Schokolade", "Nussig"],
-    "image": "img/schokonuss_torte.png",
-    "ingredients": "Schokobiskuit, Sahne, Haselnusscreme",
-    "instructions": "Böden backen. Sahne mit Nusscreme verrühren und schichten. Kühlen."
-  },
-  {
-    "title": "Zimtstreuselkuchen",
-    "category": "Kuchen",
-    "tags": ["Zimt", "Streusel"],
-    "image": "img/zimtstreusel.png",
-    "ingredients": "Rührteig, Butter, Zucker, Mehl, Zimt",
-    "instructions": "Teig vorbereiten. Zimtstreusel darüber geben und bei 180°C ca. 40 Minuten backen."
-  },
-  {
-    "title": "Cookies-and-Cream-Torte",
-    "category": "Torte",
-    "tags": ["Keks", "Cremig"],
-    "image": "img/cookiescream.png",
-    "ingredients": "Biskuit, Sahne, Kekse",
-    "instructions": "Biskuitboden backen. Sahne schlagen und mit Keksstücken schichten."
-  },
-  {
-    "title": "Schoko-Lava-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Flüssiger Kern"],
-    "image": "img/lava.png",
-    "ingredients": "Schokolade, Butter, Zucker, Eier, Mehl",
-    "instructions": "Teig anrühren, in Förmchen füllen und bei 200°C ca. 10 Minuten backen."
-  },
-  {
-    "title": "Vanillepudding-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Vanille", "Cremig"],
-    "image": "img/puddingkuchen.png",
-    "ingredients": "Rührteig, Vanillepudding",
-    "instructions": "Teig vorbereiten, Pudding darauf verteilen und bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Erdbeer-Joghurt-Torte",
-    "category": "Torte",
-    "tags": ["Erdbeere", "Leicht"],
-    "image": "img/erdbeerjoghurt.png",
-    "ingredients": "Biskuit, Joghurtcreme, Erdbeeren",
-    "instructions": "Biskuitboden backen. Joghurtcreme anrühren, Erdbeeren untermischen und schichten."
-  },
-  {
-    "title": "Nuss-Zopf-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Hefe", "Nuss"],
-    "image": "img/nusszopf.png",
-    "ingredients": "Hefeteig, Nussfüllung",
-    "instructions": "Teig ausrollen, füllen, flechten und bei 180°C ca. 35 Minuten backen."
-  },
-  {
-    "title": "Schoko-Mousse-Torte",
-    "category": "Torte",
-    "tags": ["Mousse", "Schokolade"],
-    "image": "img/schokomousse.png",
-    "ingredients": "Biskuit, Schokomousse",
-    "instructions": "Boden backen, Mousse darauf verteilen und mehrere Stunden kühlen."
-  },
-  {
-    "title": "Apfel-Karamell-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Apfel", "Karamell"],
-    "image": "img/apfelkaramell_kuchen.png",
-    "ingredients": "Rührteig, Äpfel, Karamell",
-    "instructions": "Teig zubereiten, Äpfel unterheben und nach dem Backen mit Karamell verzieren."
-  },
-  {
-    "title": "Milchmädchen-Torte",
-    "category": "Torte",
-    "tags": ["Cremig", "Süß"],
-    "image": "img/milchmaedchen.png",
-    "ingredients": "Biskuit, gezuckerte Kondensmilch, Sahne",
-    "instructions": "Böden backen. Creme aus Sahne und Kondensmilch herstellen und schichten."
-  },
-  {
-    "title": "Schoko-Zimt-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Zimt"],
-    "image": "img/schokozimt.png",
-    "ingredients": "Rührteig, Kakao, Zimt",
-    "instructions": "Teig anrühren, Kakao und Zimt unterheben und bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Vanille-Schoko-Torte",
-    "category": "Torte",
-    "tags": ["Vanille", "Schokolade"],
-    "image": "img/vanilleschoko.png",
-    "ingredients": "Biskuit, Vanillecreme, Schokolade",
-    "instructions": "Böden backen. Vanillecreme herstellen und mit Schokolade schichten."
-  },
-  {
-    "title": "Kaffee-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Kaffee", "Herb"],
-    "image": "img/kaffee.png",
-    "ingredients": "Rührteig, starker Kaffee",
-    "instructions": "Kaffee unter den Teig rühren, in Form füllen und bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Tiramisu-Torte",
-    "category": "Torte",
-    "tags": ["Kaffee", "Cremig"],
-    "image": "img/tiramisu.png",
-    "ingredients": "Biskuit, Mascarponecreme, Kaffee",
-    "instructions": "Böden tränken, Creme auftragen, schichten und kalt stellen."
-  },
-  {
-    "title": "Schoko-Mandel-Kuchen",
-    "category": "Kuchen",
-    "tags": ["Schokolade", "Mandel"],
-    "image": "img/schokomandel.png",
-    "ingredients": "Rührteig, Mandeln, Kakao",
-    "instructions": "Mandeln und Kakao unterheben und bei 175°C ca. 45 Minuten backen."
-  },
-  {
-    "title": "Finale Geburtstagstorte",
-    "category": "Torte",
-    "tags": ["Festlich", "Klassiker"],
-    "image": "img/geburtstag.png",
-    "ingredients": "Biskuit, Sahne, Dekoration",
-    "instructions": "Böden backen. Sahne schlagen, Torte füllen, dekorieren und kalt stellen."
+    "tags": ["Vanille", "Sahne", "Elegant"],
+    "image": "img/vanille_sahnetorte.png",
+    "ingredients": "Boden: Biskuit aus 4 Eiern, 120 g Zucker, 100 g Mehl, 40 g Speisestärke, 1 TL Backpulver, 1 TL Vanilleextrakt; Füllung: 600 ml Schlagsahne, 3 Päckchen Sahnesteif, 3 EL Zucker, 1 Päckchen Vanillezucker; Optional: Vanillecreme (Pudding) als Zwischenlage – 500 ml Milch, 1 Päckchen Vanillepuddingpulver zum Kochen, 50 g Zucker",
+    "instructions": "1) Biskuit zubereiten: Ofen auf 170 °C vorheizen. Eier und Zucker 6–8 Minuten schaumig schlagen, Vanilleextrakt dazugeben. Mehl, Speisestärke und Backpulver mischen, sieben und vorsichtig unterheben. 2) Biskuit in eine Springform geben und 20–25 Minuten backen. Auskühlen lassen und waagerecht in zwei Böden schneiden. 3) Wer eine Vanillecreme möchte: Pudding nach Packungsanweisung mit Milch und Zucker kochen, abkühlen lassen (direkt auf Frischhaltefolie legen, damit sich keine Haut bildet). 4) Sahne mit Zucker und Sahnesteif steif schlagen. 5) Auf den unteren Boden ggf. Vanillecreme verteilen, dann eine Schicht Sahne. Zweiten Boden auflegen und Torte außen mit Sahne einstreichen. 6) Mit frischen Beeren, Schokoladenspänen oder Vanillebohnen dekorieren. Vor dem Anschneiden mindestens 1–2 Stunden kühlen."
   }
 ]
