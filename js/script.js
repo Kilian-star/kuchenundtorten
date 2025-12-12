@@ -90,7 +90,7 @@ function renderRecipes(recipes) {
     const safe = s => (s == null ? "" : String(s));
 
     card.innerHTML = `
-      <img src="${safe(recipe.image)}" alt="${safe(recipe.title)}" loading="lazy">
+      <img src="cake.png" alt="Kuchen" loading="lazy">
       <div class="recipe-content">
         <h2>${escapeHtml(safe(recipe.title))}</h2>
 
