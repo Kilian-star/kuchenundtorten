@@ -90,7 +90,7 @@ function renderRecipes(recipes) {
     const safe = s => (s == null ? "" : String(s));
 
     card.innerHTML = `
-      <img src="cake.png" alt="Kuchen" loading="lazy">
+      <img src="${safe(recipe.image)}" alt="${safe(recipe.title)}" loading="lazy">
       <div class="recipe-content">
         <h2>${escapeHtml(safe(recipe.title))}</h2>
 
@@ -303,4 +303,3 @@ window.addEventListener("DOMContentLoaded", () => {
   initDarkMode();
   loadRecipes();
 });
-
