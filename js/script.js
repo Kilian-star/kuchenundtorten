@@ -303,3 +303,4 @@ window.addEventListener("DOMContentLoaded", () => {
   initDarkMode();
   loadRecipes();
 });
+
