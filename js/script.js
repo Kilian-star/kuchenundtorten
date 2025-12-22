@@ -1,50 +1,201 @@
-const maxLength = 100; // Anzahl Zeichen, die zuerst angezeigt werden
+// ============================
+// Globale Variablen
+// ============================
+let recipes = [];
+let activeTags = new Set();
+let showOnlyFavorites = false;
 
-function renderRecipeCard(recipe) {
-  const isFav = isFavorite(recipe.title);
+// ============================
+// DOM Elemente
+// ============================
+const resultsEl = document.getElementById("results");
+const searchInput = document.getElementById("searchInput");
+const categorySelect = document.getElementById("categorySelect");
+const tagContainer = document.getElementById("tagContainer");
+const showFavoritesBtn = document.getElementById("showFavorites");
 
-  const container = document.createElement("div");
-  container.className = "recipe-card";
+// ============================
+// Rezepte laden
+// ============================
+async function loadRecipes() {
+  try {
+    const res = await fetch("rezepte.json");
+    recipes = await res.json();
+    buildTags();
+    renderRecipes();
+  } catch (err) {
+    console.error("Fehler beim Laden der Rezepte:", err);
+  }
+}
 
-  // Text kürzen
-  let instructionsShort = recipe.instructions;
-  let isLong = false;
-  if (recipe.instructions.length > maxLength) {
-    instructionsShort = recipe.instructions.substring(0, maxLength) + "...";
-    isLong = true;
+// ============================
+// Tags erzeugen
+// ============================
+function buildTags() {
+  const tags = new Set();
+  recipes.forEach(r => r.tags.forEach(t => tags.add(t)));
+
+  tagContainer.innerHTML = "";
+  tags.forEach(tag => {
+    const btn = document.createElement("button");
+    btn.className = "tag";
+    btn.textContent = tag;
+
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      btn.classList.contains("active")
+        ? activeTags.add(tag)
+        : activeTags.delete(tag);
+      renderRecipes();
+    });
+
+    tagContainer.appendChild(btn);
+  });
+}
+
+// ============================
+// Favoriten (localStorage)
+// ============================
+function getFavorites() {
+  return JSON.parse(localStorage.getItem("favorites") || "[]");
+}
+
+function isFavorite(title) {
+  return getFavorites().includes(title);
+}
+
+function toggleFavorite(title) {
+  let favs = getFavorites();
+  if (favs.includes(title)) {
+    favs = favs.filter(t => t !== title);
+  } else {
+    favs.push(title);
+  }
+  localStorage.setItem("favorites", JSON.stringify(favs));
+  renderRecipes();
+}
+
+// ============================
+// Rezepte filtern & anzeigen
+// ============================
+function renderRecipes() {
+  resultsEl.innerHTML = "";
+
+  const search = searchInput.value.toLowerCase();
+  const category = categorySelect.value;
+  const favorites = getFavorites();
+
+  const filtered = recipes.filter(r => {
+    const matchSearch =
+      r.title.toLowerCase().includes(search) ||
+      r.ingredients.toLowerCase().includes(search);
+
+    const matchCategory =
+      category === "Alle" || r.category === category;
+
+    const matchTags =
+      activeTags.size === 0 ||
+      r.tags.some(t => activeTags.has(t));
+
+    const matchFav =
+      !showOnlyFavorites || favorites.includes(r.title);
+
+    return matchSearch && matchCategory && matchTags && matchFav;
+  });
+
+  if (filtered.length === 0) {
+    resultsEl.innerHTML = "<p style='text-align:center;'>Keine Rezepte gefunden 🍰</p>";
+    return;
   }
 
-  container.innerHTML = `
+  filtered.forEach(recipe => {
+    resultsEl.appendChild(renderRecipeCard(recipe));
+  });
+}
+
+// ============================
+// Rezeptkarte (mit Weiterlesen)
+// ============================
+function renderRecipeCard(recipe) {
+  const card = document.createElement("div");
+  card.className = "recipe-card";
+
+  const maxLength = 120;
+  const longText = recipe.instructions.length > maxLength;
+  const shortText = longText
+    ? recipe.instructions.substring(0, maxLength) + "..."
+    : recipe.instructions;
+
+  card.innerHTML = `
     <img src="${recipe.image}" alt="${recipe.title}">
     <div class="recipe-content">
       <h2>${recipe.title}</h2>
-      <div class="tags">${recipe.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-      <p><strong>Zutaten:</strong> ${recipe.ingredients}</p>
+
+      <div class="tags">
+        ${recipe.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+      </div>
+
+      <p><strong>Zutaten:</strong><br>${recipe.ingredients}</p>
+
       <p class="instructions">
-        ${instructionsShort}
-        ${isLong ? `<span class="more-text" style="display:none;">${recipe.instructions.substring(maxLength)}</span>
-        <button class="read-more-btn">Weiterlesen</button>` : ""}
+        <span class="short-text">${shortText}</span>
+        ${
+          longText
+            ? `<span class="full-text" style="display:none;">${recipe.instructions}</span>
+               <button class="read-more-btn">Weiterlesen</button>`
+            : ""
+        }
       </p>
-      <button class="fav-btn ${isFav ? "active" : ""}" data-title="${recipe.title}">
-        ${isFav ? "⭐ Favorit" : "☆ Als Favorit"}
+
+      <button class="fav-btn ${isFavorite(recipe.title) ? "active" : ""}">
+        ${isFavorite(recipe.title) ? "⭐ Favorit" : "☆ Als Favorit"}
       </button>
     </div>
   `;
 
-  // Event für „Weiterlesen“
-  const btn = container.querySelector(".read-more-btn");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      const more = container.querySelector(".more-text");
-      if (more.style.display === "none") {
-        more.style.display = "inline";
-        btn.textContent = "Weniger anzeigen";
+  // Weiterlesen Button
+  const readBtn = card.querySelector(".read-more-btn");
+  if (readBtn) {
+    readBtn.addEventListener("click", () => {
+      const shortTextEl = card.querySelector(".short-text");
+      const fullTextEl = card.querySelector(".full-text");
+
+      if (fullTextEl.style.display === "none") {
+        shortTextEl.style.display = "none";
+        fullTextEl.style.display = "inline";
+        readBtn.textContent = "Weniger anzeigen";
       } else {
-        more.style.display = "none";
-        btn.textContent = "Weiterlesen";
+        shortTextEl.style.display = "inline";
+        fullTextEl.style.display = "none";
+        readBtn.textContent = "Weiterlesen";
       }
     });
   }
 
-  return container;
+  // Favorit Button
+  card.querySelector(".fav-btn").addEventListener("click", () => {
+    toggleFavorite(recipe.title);
+  });
+
+  return card;
 }
+
+// ============================
+// Events
+// ============================
+searchInput.addEventListener("input", renderRecipes);
+categorySelect.addEventListener("change", renderRecipes);
+
+showFavoritesBtn.addEventListener("click", () => {
+  showOnlyFavorites = !showOnlyFavorites;
+  showFavoritesBtn.classList.toggle("active");
+  showFavoritesBtn.textContent = showOnlyFavorites
+    ? "⭐ Alle anzeigen"
+    : "⭐ Nur Favoriten";
+  renderRecipes();
+});
+
+// ============================
+// Start
+// ============================
+loadRecipes();
