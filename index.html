@@ -1,68 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta charset="utf-8"> <!-- UTF-8 für Sonderzeichen & Emojis -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Kuchen & Torten 🍰</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kuchen & Torten – Rezepte</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- optionales Icon (kannst du ignorieren) -->
+  <link rel="icon" href="favicon.png">
+  <script src="script.js"></script>
 
-  <meta name="description" content="Leckere Kuchen- und Tortenrezepte.">
-  <meta name="theme-color" content="#bfa0ff">
 </head>
-
 <body>
-  <header class="site-header">
-    <h1>Kuchen & Torten – Rezepte</h1>
 
-  </header>
+  <!-- =========================
+       HEADER / SUCHE
+  ========================== -->
+  <header class="header">
+    <h1>Kuchen & Torten 🍰</h1>
 
-  <main class="container">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Rezepte suchen…"
+    >
 
-    <div class="controls">
-      <input id="searchInput" class="input" placeholder="Suche nach einem Rezept" autocomplete="off">
-      <button id="clearButton" class="but">Leeren</button>
-      <button id="showFavorites">Favoriten anzeigen</button>
-      <button id="themeToggle" class="but">Dark Mode</button>
-    </div>
+    <br><br>
 
-    <select id="categorySelect" class="but">
-      <option value="all">Alle Kategorien</option>
+    <select id="categorySelect">
+      <option>Alle</option>
+      <option>Kuchen</option>
+      <option>Torte</option>
     </select>
 
-    <div id="tagContainer"></div>
+    <br><br>
 
-    <p id="status"></p>
+    <button id="showFavorites">
+      ⭐ Nur Favoriten
+    </button>
+  </header>
 
-    <div id="results" class="grid"></div>
+  <!-- =========================
+       TAGS
+  ========================== -->
+  <section id="tagContainer"></section>
 
-  </main>
-  <footer class="site-footer">
+  <!-- =========================
+       ERGEBNISSE
+  ========================== -->
+  <main id="results"></main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
     <p>
-      <a href="#top" id="toTop" style="text-decoration:none; font-weight:600;">Nach oben</a><br>
-      <a href="mailto:kuchenundtorten.website@web.de" style="color:inherit; text-decoration:none;">
-        📧 kuchenundtorten.website@web.de
-      </a>
+      © Kuchen & Torten 🍰 |
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a>
     </p>
-    <p>
-  <a href="impressum.html">📄 Impressum</a> |
-  <a href="datenschutz.html">🔒 Datenschutz</a>
-</p>
-
   </footer>
 
-  <script src="js/script.js"></script>
-
-  <!-- Smooth Scroll nach oben -->
-  <script>
-    document.getElementById("toTop").addEventListener("click", function(e){
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+  <!-- =========================
+       SCRIPT (GANZ UNTEN!)
+  ========================== -->
+  <script src="script.js"></script>
 
 </body>
 </html>
