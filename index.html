@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Dieses Projekt wurde aufgegeben</title>
-    <!-- Die Zahl '0' gibt an, wie viele Sekunden gewartet wird -->
-    <meta http-equiv="refresh" content="5;url=https://www.google.com">
-  <style>
-    h1{
-      color:red;
-    }
-  </style>
+    
+    <!-- HTML Fallback: Leitet nach genau 3 Sekunden zu Google weiter, falls kein Verlauf existiert -->
+    <meta http-equiv="refresh" content="3;url=https://google.com">
+  
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+
+    <script>
+        // Wartet exakt 3 Sekunden (3000 Millisekunden) und springt dann im Verlauf zurück
+        setTimeout(function() {
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                // Falls die Seite direkt aufgerufen wurde, erzwinge Google (oder ändere zu bing.com)
+                window.location.href = "https://google.com";
+            }
+        }, 3000);
+    </script>
 </head>
 <body>
     <h1>Dieses Projekt wurde aufgegeben,<br> da zu viele Fehler vorkamen und es schwierig wurde</h1>
